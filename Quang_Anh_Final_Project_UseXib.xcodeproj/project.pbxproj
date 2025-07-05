@@ -21,7 +21,8 @@
 		0856ECB92E190F64003DBAB6 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0856ECB82E190F64003DBAB6 /* Card.swift */; };
 		0856ECBB2E1923EE003DBAB6 /* SelectionVC2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0856ECBA2E1923EE003DBAB6 /* SelectionVC2.swift */; };
 		0856ECBD2E1923F7003DBAB6 /* SelectionVC3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0856ECBC2E1923F7003DBAB6 /* SelectionVC3.swift */; };
-		0856ECBF2E192AB9003DBAB6 /* RootVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0856ECBE2E192AB9003DBAB6 /* RootVC.swift */; };
+		0856ECC12E192F8A003DBAB6 /* BaseSelectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0856ECC02E192F8A003DBAB6 /* BaseSelectionVC.swift */; };
+		0856ECC32E192F9F003DBAB6 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0856ECC22E192F9F003DBAB6 /* MainVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,7 +42,8 @@
 		0856ECB82E190F64003DBAB6 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		0856ECBA2E1923EE003DBAB6 /* SelectionVC2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionVC2.swift; sourceTree = "<group>"; };
 		0856ECBC2E1923F7003DBAB6 /* SelectionVC3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionVC3.swift; sourceTree = "<group>"; };
-		0856ECBE2E192AB9003DBAB6 /* RootVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootVC.swift; sourceTree = "<group>"; };
+		0856ECC02E192F8A003DBAB6 /* BaseSelectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseSelectionVC.swift; sourceTree = "<group>"; };
+		0856ECC22E192F9F003DBAB6 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,7 +120,7 @@
 				0856ECA22E18C6EA003DBAB6 /* SelectionVC1.swift */,
 				0856ECBA2E1923EE003DBAB6 /* SelectionVC2.swift */,
 				0856ECBC2E1923F7003DBAB6 /* SelectionVC3.swift */,
-				0856ECBE2E192AB9003DBAB6 /* RootVC.swift */,
+				0856ECC22E192F9F003DBAB6 /* MainVC.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -146,6 +148,7 @@
 				0856ECA02E17D903003DBAB6 /* PrimaryButton.swift */,
 				0856ECB42E18E18D003DBAB6 /* CardCustomView.swift */,
 				0856ECB62E18E566003DBAB6 /* CardCollectionViewCell.swift */,
+				0856ECC02E192F8A003DBAB6 /* BaseSelectionVC.swift */,
 			);
 			path = CustomView;
 			sourceTree = "<group>";
@@ -224,10 +227,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0856ECBF2E192AB9003DBAB6 /* RootVC.swift in Sources */,
 				0856EC8C2E17D279003DBAB6 /* AppDelegate.swift in Sources */,
 				0856ECB92E190F64003DBAB6 /* Card.swift in Sources */,
 				0856EC9D2E17D319003DBAB6 /* IntroVC.swift in Sources */,
+				0856ECC12E192F8A003DBAB6 /* BaseSelectionVC.swift in Sources */,
 				0856ECB52E18E18D003DBAB6 /* CardCustomView.swift in Sources */,
 				0856ECA12E17D903003DBAB6 /* PrimaryButton.swift in Sources */,
 				0856ECA32E18C6EA003DBAB6 /* SelectionVC1.swift in Sources */,
@@ -236,6 +239,7 @@
 				0856ECBB2E1923EE003DBAB6 /* SelectionVC2.swift in Sources */,
 				0856ECB72E18E566003DBAB6 /* CardCollectionViewCell.swift in Sources */,
 				0856EC8D2E17D279003DBAB6 /* SceneDelegate.swift in Sources */,
+				0856ECC32E192F9F003DBAB6 /* MainVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
