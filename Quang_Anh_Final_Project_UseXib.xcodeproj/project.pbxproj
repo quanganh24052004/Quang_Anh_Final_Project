@@ -6,30 +6,43 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		0856EC872E17D276003DBAB6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0856EC832E17D276003DBAB6 /* LaunchScreen.storyboard */; };
+		0856EC882E17D276003DBAB6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0856EC852E17D276003DBAB6 /* Main.storyboard */; };
+		0856EC8C2E17D279003DBAB6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0856EC892E17D279003DBAB6 /* AppDelegate.swift */; };
+		0856EC8D2E17D279003DBAB6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0856EC8A2E17D279003DBAB6 /* SceneDelegate.swift */; };
+		0856EC962E17D280003DBAB6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0856EC942E17D280003DBAB6 /* ViewController.swift */; };
+		0856EC9A2E17D282003DBAB6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0856EC972E17D282003DBAB6 /* Assets.xcassets */; };
+		0856EC9D2E17D319003DBAB6 /* IntroVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0856EC9C2E17D319003DBAB6 /* IntroVC.swift */; };
+		0856ECA12E17D903003DBAB6 /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0856ECA02E17D903003DBAB6 /* PrimaryButton.swift */; };
+		0856ECA32E18C6EA003DBAB6 /* SelectionVC1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0856ECA22E18C6EA003DBAB6 /* SelectionVC1.swift */; };
+		0856ECB52E18E18D003DBAB6 /* CardCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0856ECB42E18E18D003DBAB6 /* CardCustomView.swift */; };
+		0856ECB72E18E566003DBAB6 /* CardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0856ECB62E18E566003DBAB6 /* CardCollectionViewCell.swift */; };
+		0856ECB92E190F64003DBAB6 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0856ECB82E190F64003DBAB6 /* Card.swift */; };
+		0856ECBB2E1923EE003DBAB6 /* SelectionVC2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0856ECBA2E1923EE003DBAB6 /* SelectionVC2.swift */; };
+		0856ECBD2E1923F7003DBAB6 /* SelectionVC3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0856ECBC2E1923F7003DBAB6 /* SelectionVC3.swift */; };
+		0856ECBF2E192AB9003DBAB6 /* RootVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0856ECBE2E192AB9003DBAB6 /* RootVC.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		0856EC4A2E1769F7003DBAB6 /* Quang_Anh_Final_Project_UseXib.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Quang_Anh_Final_Project_UseXib.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0856EC822E17D276003DBAB6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		0856EC842E17D276003DBAB6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0856EC892E17D279003DBAB6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		0856EC8A2E17D279003DBAB6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		0856EC942E17D280003DBAB6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0856EC972E17D282003DBAB6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0856EC982E17D282003DBAB6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0856EC9C2E17D319003DBAB6 /* IntroVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroVC.swift; sourceTree = "<group>"; };
+		0856ECA02E17D903003DBAB6 /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
+		0856ECA22E18C6EA003DBAB6 /* SelectionVC1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionVC1.swift; sourceTree = "<group>"; };
+		0856ECB42E18E18D003DBAB6 /* CardCustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCustomView.swift; sourceTree = "<group>"; };
+		0856ECB62E18E566003DBAB6 /* CardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCollectionViewCell.swift; sourceTree = "<group>"; };
+		0856ECB82E190F64003DBAB6 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		0856ECBA2E1923EE003DBAB6 /* SelectionVC2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionVC2.swift; sourceTree = "<group>"; };
+		0856ECBC2E1923F7003DBAB6 /* SelectionVC3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionVC3.swift; sourceTree = "<group>"; };
+		0856ECBE2E192AB9003DBAB6 /* RootVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		0856EC5C2E1769F9003DBAB6 /* Exceptions for "Quang_Anh_Final_Project_UseXib" folder in "Quang_Anh_Final_Project_UseXib" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				Info.plist,
-			);
-			target = 0856EC492E1769F7003DBAB6 /* Quang_Anh_Final_Project_UseXib */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		0856EC4C2E1769F7003DBAB6 /* Quang_Anh_Final_Project_UseXib */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				0856EC5C2E1769F9003DBAB6 /* Exceptions for "Quang_Anh_Final_Project_UseXib" folder in "Quang_Anh_Final_Project_UseXib" target */,
-			);
-			path = Quang_Anh_Final_Project_UseXib;
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		0856EC472E1769F7003DBAB6 /* Frameworks */ = {
@@ -45,7 +58,7 @@
 		0856EC412E1769F7003DBAB6 = {
 			isa = PBXGroup;
 			children = (
-				0856EC4C2E1769F7003DBAB6 /* Quang_Anh_Final_Project_UseXib */,
+				0856EC6C2E17CD85003DBAB6 /* Quang_Anh_Final_Project_UseXib */,
 				0856EC4B2E1769F7003DBAB6 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -56,6 +69,85 @@
 				0856EC4A2E1769F7003DBAB6 /* Quang_Anh_Final_Project_UseXib.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		0856EC6C2E17CD85003DBAB6 /* Quang_Anh_Final_Project_UseXib */ = {
+			isa = PBXGroup;
+			children = (
+				0856EC8B2E17D279003DBAB6 /* App */,
+				0856EC8E2E17D27B003DBAB6 /* Model */,
+				0856EC912E17D27E003DBAB6 /* View */,
+				0856EC952E17D280003DBAB6 /* Controller */,
+				0856EC992E17D282003DBAB6 /* Resources */,
+				0856EC862E17D276003DBAB6 /* Storyboards */,
+			);
+			path = Quang_Anh_Final_Project_UseXib;
+			sourceTree = "<group>";
+		};
+		0856EC862E17D276003DBAB6 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				0856EC832E17D276003DBAB6 /* LaunchScreen.storyboard */,
+				0856EC852E17D276003DBAB6 /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		0856EC8B2E17D279003DBAB6 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				0856EC892E17D279003DBAB6 /* AppDelegate.swift */,
+				0856EC8A2E17D279003DBAB6 /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		0856EC8E2E17D27B003DBAB6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0856ECB82E190F64003DBAB6 /* Card.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0856EC912E17D27E003DBAB6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0856EC9F2E17D8E8003DBAB6 /* CustomView */,
+				0856EC9C2E17D319003DBAB6 /* IntroVC.swift */,
+				0856ECA22E18C6EA003DBAB6 /* SelectionVC1.swift */,
+				0856ECBA2E1923EE003DBAB6 /* SelectionVC2.swift */,
+				0856ECBC2E1923F7003DBAB6 /* SelectionVC3.swift */,
+				0856ECBE2E192AB9003DBAB6 /* RootVC.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0856EC952E17D280003DBAB6 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0856EC942E17D280003DBAB6 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		0856EC992E17D282003DBAB6 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0856EC972E17D282003DBAB6 /* Assets.xcassets */,
+				0856EC982E17D282003DBAB6 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		0856EC9F2E17D8E8003DBAB6 /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				0856ECA02E17D903003DBAB6 /* PrimaryButton.swift */,
+				0856ECB42E18E18D003DBAB6 /* CardCustomView.swift */,
+				0856ECB62E18E566003DBAB6 /* CardCollectionViewCell.swift */,
+			);
+			path = CustomView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -72,9 +164,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				0856EC4C2E1769F7003DBAB6 /* Quang_Anh_Final_Project_UseXib */,
 			);
 			name = Quang_Anh_Final_Project_UseXib;
 			packageProductDependencies = (
@@ -122,6 +211,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0856EC872E17D276003DBAB6 /* LaunchScreen.storyboard in Resources */,
+				0856EC9A2E17D282003DBAB6 /* Assets.xcassets in Resources */,
+				0856EC882E17D276003DBAB6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,10 +224,41 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0856ECBF2E192AB9003DBAB6 /* RootVC.swift in Sources */,
+				0856EC8C2E17D279003DBAB6 /* AppDelegate.swift in Sources */,
+				0856ECB92E190F64003DBAB6 /* Card.swift in Sources */,
+				0856EC9D2E17D319003DBAB6 /* IntroVC.swift in Sources */,
+				0856ECB52E18E18D003DBAB6 /* CardCustomView.swift in Sources */,
+				0856ECA12E17D903003DBAB6 /* PrimaryButton.swift in Sources */,
+				0856ECA32E18C6EA003DBAB6 /* SelectionVC1.swift in Sources */,
+				0856ECBD2E1923F7003DBAB6 /* SelectionVC3.swift in Sources */,
+				0856EC962E17D280003DBAB6 /* ViewController.swift in Sources */,
+				0856ECBB2E1923EE003DBAB6 /* SelectionVC2.swift in Sources */,
+				0856ECB72E18E566003DBAB6 /* CardCollectionViewCell.swift in Sources */,
+				0856EC8D2E17D279003DBAB6 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		0856EC832E17D276003DBAB6 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0856EC822E17D276003DBAB6 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		0856EC852E17D276003DBAB6 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0856EC842E17D276003DBAB6 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		0856EC5E2E1769F9003DBAB6 /* Debug */ = {
@@ -147,7 +270,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = WT5PJGD97N;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Quang_Anh_Final_Project_UseXib/Info.plist;
+				INFOPLIST_FILE = Quang_Anh_Final_Project_UseXib/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -175,7 +298,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = WT5PJGD97N;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Quang_Anh_Final_Project_UseXib/Info.plist;
+				INFOPLIST_FILE = Quang_Anh_Final_Project_UseXib/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
