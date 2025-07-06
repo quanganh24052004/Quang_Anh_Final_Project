@@ -26,6 +26,8 @@
 		0856ECC52E1A120D003DBAB6 /* MainTabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0856ECC42E1A120D003DBAB6 /* MainTabBarVC.swift */; };
 		0856ECC92E1A1318003DBAB6 /* ReportVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0856ECC82E1A1318003DBAB6 /* ReportVC.swift */; };
 		0856ECCB2E1A131F003DBAB6 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0856ECCA2E1A131F003DBAB6 /* SettingsVC.swift */; };
+		2CE0769D2E1AD51D006E9059 /* PremiumCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE0769C2E1AD51D006E9059 /* PremiumCustomView.swift */; };
+		2CE076A52E1AE0B9006E9059 /* PremiumDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE076A32E1AE0B9006E9059 /* PremiumDetailVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +52,8 @@
 		0856ECC42E1A120D003DBAB6 /* MainTabBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarVC.swift; sourceTree = "<group>"; };
 		0856ECC82E1A1318003DBAB6 /* ReportVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportVC.swift; sourceTree = "<group>"; };
 		0856ECCA2E1A131F003DBAB6 /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
+		2CE0769C2E1AD51D006E9059 /* PremiumCustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PremiumCustomView.swift; sourceTree = "<group>"; };
+		2CE076A32E1AE0B9006E9059 /* PremiumDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PremiumDetailVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +157,7 @@
 				0856ECB42E18E18D003DBAB6 /* CardCustomView.swift */,
 				0856ECB62E18E566003DBAB6 /* CardCollectionViewCell.swift */,
 				0856ECC02E192F8A003DBAB6 /* BaseSelectionVC.swift */,
+				2CE0769C2E1AD51D006E9059 /* PremiumCustomView.swift */,
 			);
 			path = CustomView;
 			sourceTree = "<group>";
@@ -171,11 +176,20 @@
 		0856ECC72E1A12FC003DBAB6 /* Root */ = {
 			isa = PBXGroup;
 			children = (
+				2CE076A42E1AE0B9006E9059 /* SettingsView */,
 				0856ECC42E1A120D003DBAB6 /* MainTabBarVC.swift */,
 				0856ECC82E1A1318003DBAB6 /* ReportVC.swift */,
 				0856ECCA2E1A131F003DBAB6 /* SettingsVC.swift */,
 			);
 			path = Root;
+			sourceTree = "<group>";
+		};
+		2CE076A42E1AE0B9006E9059 /* SettingsView */ = {
+			isa = PBXGroup;
+			children = (
+				2CE076A32E1AE0B9006E9059 /* PremiumDetailVC.swift */,
+			);
+			path = SettingsView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,9 +275,11 @@
 				0856ECB52E18E18D003DBAB6 /* CardCustomView.swift in Sources */,
 				0856ECA12E17D903003DBAB6 /* PrimaryButton.swift in Sources */,
 				0856ECA32E18C6EA003DBAB6 /* SelectionVC1.swift in Sources */,
+				2CE0769D2E1AD51D006E9059 /* PremiumCustomView.swift in Sources */,
 				0856ECBD2E1923F7003DBAB6 /* SelectionVC3.swift in Sources */,
 				0856EC962E17D280003DBAB6 /* ViewController.swift in Sources */,
 				0856ECBB2E1923EE003DBAB6 /* SelectionVC2.swift in Sources */,
+				2CE076A52E1AE0B9006E9059 /* PremiumDetailVC.swift in Sources */,
 				0856ECB72E18E566003DBAB6 /* CardCollectionViewCell.swift in Sources */,
 				0856ECC52E1A120D003DBAB6 /* MainTabBarVC.swift in Sources */,
 				0856EC8D2E17D279003DBAB6 /* SceneDelegate.swift in Sources */,
