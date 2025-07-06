@@ -23,6 +23,9 @@
 		0856ECBD2E1923F7003DBAB6 /* SelectionVC3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0856ECBC2E1923F7003DBAB6 /* SelectionVC3.swift */; };
 		0856ECC12E192F8A003DBAB6 /* BaseSelectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0856ECC02E192F8A003DBAB6 /* BaseSelectionVC.swift */; };
 		0856ECC32E192F9F003DBAB6 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0856ECC22E192F9F003DBAB6 /* MainVC.swift */; };
+		0856ECC52E1A120D003DBAB6 /* MainTabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0856ECC42E1A120D003DBAB6 /* MainTabBarVC.swift */; };
+		0856ECC92E1A1318003DBAB6 /* ReportVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0856ECC82E1A1318003DBAB6 /* ReportVC.swift */; };
+		0856ECCB2E1A131F003DBAB6 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0856ECCA2E1A131F003DBAB6 /* SettingsVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +47,9 @@
 		0856ECBC2E1923F7003DBAB6 /* SelectionVC3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionVC3.swift; sourceTree = "<group>"; };
 		0856ECC02E192F8A003DBAB6 /* BaseSelectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseSelectionVC.swift; sourceTree = "<group>"; };
 		0856ECC22E192F9F003DBAB6 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
+		0856ECC42E1A120D003DBAB6 /* MainTabBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarVC.swift; sourceTree = "<group>"; };
+		0856ECC82E1A1318003DBAB6 /* ReportVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportVC.swift; sourceTree = "<group>"; };
+		0856ECCA2E1A131F003DBAB6 /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,11 +121,9 @@
 		0856EC912E17D27E003DBAB6 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				0856ECC72E1A12FC003DBAB6 /* Root */,
+				0856ECC62E1A12E0003DBAB6 /* Introduction */,
 				0856EC9F2E17D8E8003DBAB6 /* CustomView */,
-				0856EC9C2E17D319003DBAB6 /* IntroVC.swift */,
-				0856ECA22E18C6EA003DBAB6 /* SelectionVC1.swift */,
-				0856ECBA2E1923EE003DBAB6 /* SelectionVC2.swift */,
-				0856ECBC2E1923F7003DBAB6 /* SelectionVC3.swift */,
 				0856ECC22E192F9F003DBAB6 /* MainVC.swift */,
 			);
 			path = View;
@@ -151,6 +155,27 @@
 				0856ECC02E192F8A003DBAB6 /* BaseSelectionVC.swift */,
 			);
 			path = CustomView;
+			sourceTree = "<group>";
+		};
+		0856ECC62E1A12E0003DBAB6 /* Introduction */ = {
+			isa = PBXGroup;
+			children = (
+				0856EC9C2E17D319003DBAB6 /* IntroVC.swift */,
+				0856ECA22E18C6EA003DBAB6 /* SelectionVC1.swift */,
+				0856ECBA2E1923EE003DBAB6 /* SelectionVC2.swift */,
+				0856ECBC2E1923F7003DBAB6 /* SelectionVC3.swift */,
+			);
+			path = Introduction;
+			sourceTree = "<group>";
+		};
+		0856ECC72E1A12FC003DBAB6 /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				0856ECC42E1A120D003DBAB6 /* MainTabBarVC.swift */,
+				0856ECC82E1A1318003DBAB6 /* ReportVC.swift */,
+				0856ECCA2E1A131F003DBAB6 /* SettingsVC.swift */,
+			);
+			path = Root;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -228,6 +253,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				0856EC8C2E17D279003DBAB6 /* AppDelegate.swift in Sources */,
+				0856ECCB2E1A131F003DBAB6 /* SettingsVC.swift in Sources */,
+				0856ECC92E1A1318003DBAB6 /* ReportVC.swift in Sources */,
 				0856ECB92E190F64003DBAB6 /* Card.swift in Sources */,
 				0856EC9D2E17D319003DBAB6 /* IntroVC.swift in Sources */,
 				0856ECC12E192F8A003DBAB6 /* BaseSelectionVC.swift in Sources */,
@@ -238,6 +265,7 @@
 				0856EC962E17D280003DBAB6 /* ViewController.swift in Sources */,
 				0856ECBB2E1923EE003DBAB6 /* SelectionVC2.swift in Sources */,
 				0856ECB72E18E566003DBAB6 /* CardCollectionViewCell.swift in Sources */,
+				0856ECC52E1A120D003DBAB6 /* MainTabBarVC.swift in Sources */,
 				0856EC8D2E17D279003DBAB6 /* SceneDelegate.swift in Sources */,
 				0856ECC32E192F9F003DBAB6 /* MainVC.swift in Sources */,
 			);

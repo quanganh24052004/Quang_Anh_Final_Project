@@ -149,12 +149,12 @@ class SelectionVC3: BaseSelectionVC {
             // ✅ Đánh dấu đã xem Intro
             UserDefaults.standard.set(true, forKey: "hasSeenIntro")
 
-            // ✅ Chuyển đến màn hình chính
-            let mainVC = MainVC()
-            let nav = UINavigationController(rootViewController: mainVC)
+            // ✅ Chuyển đến TabBar
+            let mainTabBarVC = MainTabBarVC()
+
             if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
                let window = windowScene.windows.first {
-                window.rootViewController = nav
+                window.rootViewController = mainTabBarVC
                 window.makeKeyAndVisible()
 
                 UIView.transition(with: window,

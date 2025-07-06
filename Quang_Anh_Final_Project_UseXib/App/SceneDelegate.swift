@@ -24,24 +24,41 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 //        window.rootViewController = naviVC
 //        self.window = window
 //        window.makeKeyAndVisible()
+//        guard let windowScene = (scene as? UIWindowScene) else { return }
+//
+//                let window = UIWindow(windowScene: windowScene)
+//
+//                let hasSeenIntro = UserDefaults.standard.bool(forKey: "hasSeenIntro")
+//
+//                if hasSeenIntro {
+//                    let mainTabBarVC = MainTabBarVC() // hoặc MainTabBarController nếu dùng TabBar
+//                    let nav = UINavigationController(rootViewController: mainTabBarVC)
+//                    window.rootViewController = nav
+//                } else {
+//                    let introVC = IntroVC()
+//                    let nav = UINavigationController(rootViewController: introVC)
+//                    window.rootViewController = nav
+//                }
+//
+//                self.window = window
+//                window.makeKeyAndVisible()
         guard let windowScene = (scene as? UIWindowScene) else { return }
 
-                let window = UIWindow(windowScene: windowScene)
+        let window = UIWindow(windowScene: windowScene)
 
-                let hasSeenIntro = UserDefaults.standard.bool(forKey: "hasSeenIntro")
+        let hasSeenIntro = UserDefaults.standard.bool(forKey: "hasSeenIntro")
 
-                if hasSeenIntro {
-                    let mainVC = MainVC() // hoặc MainTabBarController nếu dùng TabBar
-                    let nav = UINavigationController(rootViewController: mainVC)
-                    window.rootViewController = nav
-                } else {
-                    let introVC = IntroVC()
-                    let nav = UINavigationController(rootViewController: introVC)
-                    window.rootViewController = nav
-                }
+        if hasSeenIntro {
+            let mainTabBarVC = MainTabBarVC()
+            window.rootViewController = mainTabBarVC
+        } else {
+            let introVC = IntroVC()
+            let nav = UINavigationController(rootViewController: introVC)
+            window.rootViewController = nav
+        }
 
-                self.window = window
-                window.makeKeyAndVisible()
+        self.window = window
+        window.makeKeyAndVisible()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

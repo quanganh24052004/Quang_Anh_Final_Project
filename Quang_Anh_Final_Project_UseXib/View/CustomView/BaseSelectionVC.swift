@@ -52,6 +52,7 @@ class BaseSelectionVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .background
+        navigationItem.hidesBackButton = true
 
         titleLabel.text = pageTitle
 
