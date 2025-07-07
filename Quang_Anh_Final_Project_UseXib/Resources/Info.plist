@@ -21,5 +21,7 @@
 			</array>
 		</dict>
 	</dict>
+	<key>CFBundleDisplayName</key>
+	<string>Health Guru</string>
 </dict>
 </plist>

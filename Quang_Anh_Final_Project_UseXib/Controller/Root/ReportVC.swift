@@ -130,9 +130,20 @@ extension ReportVC: UICollectionViewDataSource, UICollectionViewDelegate {
         cell.configure(with: data[indexPath.item])
         return cell
     }
+
+    // Swipe to delete
+    func collectionView(_ collectionView: UICollectionView, trailingSwipeActionsConfigurationForItemAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let deleteAction = UIContextualAction(style: .destructive, title: "Delete") { [weak self] (action, view, completionHandler) in
+            guard let self = self else { completionHandler(false); return }
+            self.data.remove(at: indexPath.item)
+            PulseEntry.saveAll(self.data)
+            collectionView.deleteItems(at: [indexPath])
+            self.updateViewState()
+            completionHandler(true)
+        }
+        return UISwipeActionsConfiguration(actions: [deleteAction])
+    }
 }
-
-
 
 #Preview {
     ReportVC()
