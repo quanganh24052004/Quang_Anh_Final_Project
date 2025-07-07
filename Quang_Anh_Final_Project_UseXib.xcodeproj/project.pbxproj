@@ -39,6 +39,7 @@
 		2CBC51932E1BE2B300AB5745 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CBC51922E1BE2B300AB5745 /* UserProfile.swift */; };
 		2CBC51952E1BE3A200AB5745 /* MyProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CBC51942E1BE3A200AB5745 /* MyProfileVC.swift */; };
 		2CCAF5D72E1C290A00629EE2 /* EmptyLogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCAF5D62E1C290A00629EE2 /* EmptyLogView.swift */; };
+		2CCAF5D92E1C2F4100629EE2 /* DailyAdviceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCAF5D82E1C2F4000629EE2 /* DailyAdviceView.swift */; };
 		2CE076A52E1AE0B9006E9059 /* PremiumDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE076A32E1AE0B9006E9059 /* PremiumDetailVC.swift */; };
 /* End PBXBuildFile section */
 
@@ -77,6 +78,7 @@
 		2CBC51922E1BE2B300AB5745 /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
 		2CBC51942E1BE3A200AB5745 /* MyProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileVC.swift; sourceTree = "<group>"; };
 		2CCAF5D62E1C290A00629EE2 /* EmptyLogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyLogView.swift; sourceTree = "<group>"; };
+		2CCAF5D82E1C2F4000629EE2 /* DailyAdviceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyAdviceView.swift; sourceTree = "<group>"; };
 		2CE076A32E1AE0B9006E9059 /* PremiumDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PremiumDetailVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -254,6 +256,7 @@
 				2CBC51702E1B5B5000AB5745 /* CardCustomView.swift */,
 				2CBC51712E1B5B5000AB5745 /* PremiumCustomView.swift */,
 				2CCAF5D62E1C290A00629EE2 /* EmptyLogView.swift */,
+				2CCAF5D82E1C2F4000629EE2 /* DailyAdviceView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -351,6 +354,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2CBC51732E1B5B5000AB5745 /* CardCustomView.swift in Sources */,
+				2CCAF5D92E1C2F4100629EE2 /* DailyAdviceView.swift in Sources */,
 				2CCAF5D72E1C290A00629EE2 /* EmptyLogView.swift in Sources */,
 				2CBC51742E1B5B5000AB5745 /* PremiumCustomView.swift in Sources */,
 				2CBC516A2E1B5B1B00AB5745 /* PrimaryButton.swift in Sources */,
