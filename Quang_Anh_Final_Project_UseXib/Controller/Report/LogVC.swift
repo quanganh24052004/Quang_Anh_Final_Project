@@ -98,6 +98,9 @@ class LogVC: UIViewController {
         else { return }
 
         let entry = PulseEntry(pulse: pulse, hrv: hrv)
+        var allEntries = PulseEntry.loadAll()
+        allEntries.append(entry)
+        PulseEntry.saveAll(allEntries)
         onAddEntry?(entry)
         navigationController?.popViewController(animated: true)
     }
@@ -111,4 +114,21 @@ class LogVC: UIViewController {
 
 #Preview {
     LogVC()
+}
+
+// Thêm extension để lưu/đọc PulseEntry
+extension PulseEntry {
+    static let userDefaultsKey = "pulse_entries"
+    static func saveAll(_ entries: [PulseEntry]) {
+        if let data = try? JSONEncoder().encode(entries) {
+            UserDefaults.standard.set(data, forKey: userDefaultsKey)
+        }
+    }
+    static func loadAll() -> [PulseEntry] {
+        guard let data = UserDefaults.standard.data(forKey: userDefaultsKey),
+              let entries = try? JSONDecoder().decode([PulseEntry].self, from: data) else {
+            return []
+        }
+        return entries
+    }
 }

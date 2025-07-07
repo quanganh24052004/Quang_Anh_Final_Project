@@ -15,7 +15,7 @@ enum Status: String {
     }
 }
     
-struct PulseEntry {
+struct PulseEntry: Codable {
     let pulse: Int
     let hrv: Int
     var status: Status {

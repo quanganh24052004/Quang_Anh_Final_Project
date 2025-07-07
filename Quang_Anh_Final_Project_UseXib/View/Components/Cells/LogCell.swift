@@ -124,7 +124,7 @@ class LogCell: UICollectionViewCell {
         pulseValueLabel.text = "\(entry.pulse) bpm"
         
         hrvLabel.text = "HRV:"
-        hrvValueLabel.text = "\(entry.hrv) bpm"
+        hrvValueLabel.text = "\(entry.hrv) ms"
         
         statusLabel.text = "Status"
         statusValueLabel.text = entry.status.rawValue

@@ -40,6 +40,13 @@ class ReportVC: UIViewController {
         updateViewState()
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        data = PulseEntry.loadAll()
+        logCollectionView.reloadData()
+        updateViewState()
+    }
+
     // MARK: - UI Setup
 
     private func setupUI() {
@@ -103,9 +110,7 @@ class ReportVC: UIViewController {
         let vc = LogVC()
         vc.hidesBottomBarWhenPushed = true
         vc.onAddEntry = { [weak self] entry in
-            self?.data.append(entry)
-            self?.logCollectionView.reloadData()
-            self?.updateViewState()
+            self?.navigationController?.popViewController(animated: true)
         }
         navigationController?.pushViewController(vc, animated: true)
     }
