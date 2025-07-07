@@ -1,9 +1,11 @@
+// MARK: - Import
 import UIKit
 
+// MARK: - LogCell
 class LogCell: UICollectionViewCell {
     static let identifier = "LogCell"
     
-    // MARK: SUBVIEWS
+    // MARK: - Subviews
     private let imgView: UIImageView = {
         let imgView = UIImageView()
         imgView.image = UIImage(named: "heartIcon")
@@ -67,7 +69,7 @@ class LogCell: UICollectionViewCell {
         return label
     }()
     
-    // MARK: INIT
+    // MARK: - Init
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupUI()
@@ -77,7 +79,7 @@ class LogCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    // MARK: UI SETUP
+    // MARK: - UI Setup
     private func setupUI() {
         contentView.layer.cornerRadius = 12
         //contentView.layer.borderWidth = 1
@@ -91,50 +93,41 @@ class LogCell: UICollectionViewCell {
         NSLayoutConstraint.activate([
             imgView.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
             imgView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 12),
-
-            
             // Pulse
             pulseLabel.topAnchor.constraint(equalTo: imgView.topAnchor),
             pulseLabel.leadingAnchor.constraint(equalTo: imgView.trailingAnchor, constant: 12),
             pulseLabel.widthAnchor.constraint(equalToConstant: 80),
-            
             pulseValueLabel.bottomAnchor.constraint(equalTo: imgView.bottomAnchor),
             pulseValueLabel.leadingAnchor.constraint(equalTo: pulseLabel.leadingAnchor),
-            
             // HRV
             hrvLabel.topAnchor.constraint(equalTo: imgView.topAnchor),
             hrvLabel.leadingAnchor.constraint(equalTo: pulseLabel.trailingAnchor, constant: 12),
             hrvLabel.widthAnchor.constraint(equalToConstant: 80),
-            
             hrvValueLabel.bottomAnchor.constraint(equalTo: imgView.bottomAnchor),
             hrvValueLabel.leadingAnchor.constraint(equalTo: hrvLabel.leadingAnchor),
-            
             // Status
             statusLabel.topAnchor.constraint(equalTo: imgView.topAnchor),
             statusLabel.leadingAnchor.constraint(equalTo: hrvLabel.trailingAnchor, constant: 12),
             statusLabel.trailingAnchor.constraint(lessThanOrEqualTo: contentView.trailingAnchor, constant: -12),
-            
             statusValueLabel.bottomAnchor.constraint(equalTo: imgView.bottomAnchor),
             statusValueLabel.leadingAnchor.constraint(equalTo: statusLabel.leadingAnchor)
         ])
     }
 
+    // MARK: - Public API
     func configure(with entry: PulseEntry) {
         pulseLabel.text = "Pulse:"
         pulseValueLabel.text = "\(entry.pulse) bpm"
-        
         hrvLabel.text = "HRV:"
         hrvValueLabel.text = "\(entry.hrv) ms"
-        
         statusLabel.text = "Status"
         statusValueLabel.text = entry.status.rawValue
-        
         let color = entry.status.color
         pulseValueLabel.textColor = color
         hrvValueLabel.textColor = color
         statusValueLabel.textColor = color
     }
-
+    // TODO: Có thể thêm animation khi cell được chọn hoặc xóa
 }
 
 #Preview {

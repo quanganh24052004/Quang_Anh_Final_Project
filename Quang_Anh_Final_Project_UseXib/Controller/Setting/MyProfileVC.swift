@@ -1,7 +1,8 @@
+// MARK: - Import
 import UIKit
 
+// MARK: - MyProfileVC
 class MyProfileVC: UIViewController {
-
     // MARK: - UI Components
     private let avatarImageView: UIImageView = {
         let iv = UIImageView()
@@ -78,7 +79,7 @@ class MyProfileVC: UIViewController {
         title = "Profile"
         setupLeftNavButton()
         setupDeleteButton()
-        setupLayout()
+        setupUI()
         loadProfile()
     }
 
@@ -88,47 +89,27 @@ class MyProfileVC: UIViewController {
     }
 
     // MARK: - UI Setup
-    private func setupLayout() {
+    private func setupUI() {
+        setupAvatar()
+        setupNameLabel()
+        setupBMICard()
+        setupEditButton()
+        setupConstraints()
+    }
+    
+    private func setupAvatar() {
         view.addSubview(avatarImageView)
+    }
+    
+    private func setupNameLabel() {
         view.addSubview(nameLabel)
+    }
+    
+    private func setupBMICard() {
         view.addSubview(bmiCardView)
-        view.addSubview(editButton)
-        
         bmiCardView.addSubview(bmiTitleLabel)
         bmiCardView.addSubview(bmiValueLabel)
         bmiCardView.addSubview(infoStack)
-        
-        NSLayoutConstraint.activate([
-            avatarImageView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 32),
-            avatarImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            avatarImageView.widthAnchor.constraint(equalToConstant: 120),
-            avatarImageView.heightAnchor.constraint(equalToConstant: 120),
-            
-            nameLabel.topAnchor.constraint(equalTo: avatarImageView.bottomAnchor, constant: 16),
-            nameLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            
-            bmiCardView.topAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: 24),
-            bmiCardView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            bmiCardView.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.88),
-            bmiCardView.heightAnchor.constraint(equalToConstant: 160),
-            
-            bmiTitleLabel.topAnchor.constraint(equalTo: bmiCardView.topAnchor, constant: 16),
-            bmiTitleLabel.centerXAnchor.constraint(equalTo: bmiCardView.centerXAnchor),
-            
-            bmiValueLabel.topAnchor.constraint(equalTo: bmiTitleLabel.bottomAnchor, constant: 4),
-            bmiValueLabel.centerXAnchor.constraint(equalTo: bmiCardView.centerXAnchor),
-            
-            infoStack.topAnchor.constraint(equalTo: bmiValueLabel.bottomAnchor, constant: 12),
-            infoStack.leadingAnchor.constraint(equalTo: bmiCardView.leadingAnchor, constant: 12),
-            infoStack.trailingAnchor.constraint(equalTo: bmiCardView.trailingAnchor, constant: -12),
-            infoStack.bottomAnchor.constraint(equalTo: bmiCardView.bottomAnchor, constant: -12),
-            
-            editButton.topAnchor.constraint(equalTo: bmiCardView.bottomAnchor, constant: 32),
-            editButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            editButton.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.7),
-            editButton.heightAnchor.constraint(equalToConstant: 56)
-        ])
-        
         // Add info items to infoStack
         let infoTitles = ["Weight", "Height", "Gender"]
         let infoValues = ["--", "--", "--"]
@@ -138,29 +119,56 @@ class MyProfileVC: UIViewController {
             vStack.alignment = .center
             vStack.spacing = 2
             vStack.translatesAutoresizingMaskIntoConstraints = false
-            
             let valueLabel = UILabel()
             valueLabel.text = infoValues[i]
             valueLabel.font = .systemFont(ofSize: 20, weight: .semibold)
             valueLabel.textColor = UIColor(named: "good")
             valueLabel.textAlignment = .center
             valueLabel.tag = 100 + i // Để cập nhật sau
-            
             let titleLabel = UILabel()
             titleLabel.text = infoTitles[i]
             titleLabel.font = .systemFont(ofSize: 14, weight: .regular)
             titleLabel.textColor = UIColor(named: "subtitle")
             titleLabel.textAlignment = .center
-            
             vStack.addArrangedSubview(valueLabel)
             vStack.addArrangedSubview(titleLabel)
             infoStack.addArrangedSubview(vStack)
         }
-        
-        // Action cho nút Editing
+    }
+    
+    private func setupEditButton() {
+        view.addSubview(editButton)
         editButton.addTarget(self, action: #selector(didTapEdit), for: .touchUpInside)
     }
     
+    private func setupConstraints() {
+        NSLayoutConstraint.activate([
+            avatarImageView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 32),
+            avatarImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            avatarImageView.widthAnchor.constraint(equalToConstant: 120),
+            avatarImageView.heightAnchor.constraint(equalToConstant: 120),
+            nameLabel.topAnchor.constraint(equalTo: avatarImageView.bottomAnchor, constant: 16),
+            nameLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            bmiCardView.topAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: 24),
+            bmiCardView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            bmiCardView.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.88),
+            bmiCardView.heightAnchor.constraint(equalToConstant: 160),
+            bmiTitleLabel.topAnchor.constraint(equalTo: bmiCardView.topAnchor, constant: 16),
+            bmiTitleLabel.centerXAnchor.constraint(equalTo: bmiCardView.centerXAnchor),
+            bmiValueLabel.topAnchor.constraint(equalTo: bmiTitleLabel.bottomAnchor, constant: 4),
+            bmiValueLabel.centerXAnchor.constraint(equalTo: bmiCardView.centerXAnchor),
+            infoStack.topAnchor.constraint(equalTo: bmiValueLabel.bottomAnchor, constant: 12),
+            infoStack.leadingAnchor.constraint(equalTo: bmiCardView.leadingAnchor, constant: 12),
+            infoStack.trailingAnchor.constraint(equalTo: bmiCardView.trailingAnchor, constant: -12),
+            infoStack.bottomAnchor.constraint(equalTo: bmiCardView.bottomAnchor, constant: -12),
+            editButton.topAnchor.constraint(equalTo: bmiCardView.bottomAnchor, constant: 32),
+            editButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            editButton.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.7),
+            editButton.heightAnchor.constraint(equalToConstant: 56)
+        ])
+    }
+    
+    // MARK: - Navigation
     private func setupLeftNavButton() {
         let leftButtonView = LeftNavButton()
         leftButtonView.iconImageView.image = UIImage(systemName: "chevron.left")
@@ -209,6 +217,7 @@ class MyProfileVC: UIViewController {
         }
     }
 
+    // MARK: - Actions
     @objc private func didTapDelete() {
         let alert = UIAlertController(
             title: "Confirm Deletion",
@@ -236,7 +245,7 @@ class MyProfileVC: UIViewController {
     }
 
     @objc private func didTapEdit() {
-        // Chuyển sang ProfileVC để chỉnh sửa
+        // TODO: Thực hiện chức năng sửa thông tin profile (nếu cần mở rộng logic)
         let profileVC = ProfileVC()
         if let profile = ProfileStorage.get() {
             profileVC.userProfile = profile

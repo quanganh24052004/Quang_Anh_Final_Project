@@ -5,17 +5,19 @@
 //  Created by iKame Elite Fresher 2025 on 7/1/25.
 //
 
+// MARK: - Import
 import UIKit
 
+// MARK: - FormCV
 class FormCV: UIView {
     
-    // MARK: Subviews
+    // MARK: - Subviews
     private let label = UILabel()
     let textField = UITextField()
     
     private let stackView = UIStackView()
     
-    // MARK: Init
+    // MARK: - Init
     init(title: String, placeholder: String) {
         super.init(frame: .zero)
         setupLabel(title: title)
@@ -40,7 +42,7 @@ class FormCV: UIView {
         setUpConstraints()
     }
     
-    // MARK: Setup
+    // MARK: - Setup
     private func setupLabel(title: String) {
         label.text = title
         label.font = .systemFont(ofSize: 16, weight: .medium)
@@ -77,6 +79,8 @@ class FormCV: UIView {
             stackView.bottomAnchor.constraint(equalTo: bottomAnchor)
         ])
     }
+    
+    // TODO: Có thể thêm validate input hoặc custom UI cho textField
 }
 
 #Preview {

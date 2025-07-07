@@ -1,7 +1,9 @@
+// MARK: - Import
 import UIKit
 
+// MARK: - LogVC
 class LogVC: UIViewController {
-
+    // MARK: - Properties
     var onAddEntry: ((PulseEntry) -> Void)?
 
     // MARK: - UI Components
@@ -31,28 +33,32 @@ class LogVC: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .background
         navigationItem.title = "Information"
-
         setupLeftNavButton()
-        setupLayout()
+        setupUI()
         setupAction()
     }
 
-    // MARK: - Setup UI
-    private func setupLayout() {
+    // MARK: - UI Setup
+    private func setupUI() {
+        setupMainStack()
+        setupAddButton()
+        setupConstraints()
+    }
+    private func setupMainStack() {
         view.addSubview(mainStack)
-        view.addSubview(addButton)
-
         mainStack.addArrangedSubview(pulseForm)
         mainStack.addArrangedSubview(hrvForm)
-
+    }
+    private func setupAddButton() {
+        view.addSubview(addButton)
+    }
+    private func setupConstraints() {
         NSLayoutConstraint.activate([
             pulseForm.heightAnchor.constraint(equalToConstant: 80),
             hrvForm.heightAnchor.constraint(equalToConstant: 80),
-
             mainStack.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 24),
             mainStack.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
             mainStack.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
-
             addButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 16),
             addButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -16),
             addButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -16),
@@ -60,6 +66,7 @@ class LogVC: UIViewController {
         ])
     }
 
+    // MARK: - Navigation
     private func setupLeftNavButton() {
         let leftButtonView = LeftNavButton()
         leftButtonView.iconImageView.image = UIImage(systemName: "chevron.left")
@@ -70,6 +77,7 @@ class LogVC: UIViewController {
         navigationItem.leftBarButtonItem = leftItem
     }
 
+    // MARK: - Actions
     private func setupAction() {
         [pulseForm.textField, hrvForm.textField].forEach {
             $0.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
@@ -116,7 +124,7 @@ class LogVC: UIViewController {
     LogVC()
 }
 
-// Thêm extension để lưu/đọc PulseEntry
+// MARK: - PulseEntry UserDefaults Extension
 extension PulseEntry {
     static let userDefaultsKey = "pulse_entries"
     static func saveAll(_ entries: [PulseEntry]) {
@@ -131,4 +139,5 @@ extension PulseEntry {
         }
         return entries
     }
+    // TODO: Có thể thêm hàm xóa từng entry nếu cần
 }

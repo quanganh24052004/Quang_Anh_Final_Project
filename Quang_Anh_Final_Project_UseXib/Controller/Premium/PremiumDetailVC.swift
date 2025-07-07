@@ -5,9 +5,18 @@
 //  Created by iKame Elite Fresher 2025 on 7/6/25.
 //
 
+// MARK: - Import
 import UIKit
 
+// MARK: - PremiumDetailVC
 class PremiumDetailVC: UIViewController {
+    // TODO: Thêm các thuộc tính và logic cho màn hình Premium Detail
+    // MARK: - Life Cycle
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        view.backgroundColor = .white
+        setupUI()
+    }
     
     private let titlePremium: UILabel = {
         let label = UILabel()
@@ -17,11 +26,6 @@ class PremiumDetailVC: UIViewController {
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        view.backgroundColor = .white
-        setupUI()
-    }
     
     private func setupUI() {
         view.addSubview(titlePremium)
@@ -32,6 +36,8 @@ class PremiumDetailVC: UIViewController {
         ])
     }
     
+    // MARK: - Actions
+    // TODO: Thêm các action cho nút, gesture nếu có
 
     /*
     // MARK: - Navigation
@@ -42,5 +48,4 @@ class PremiumDetailVC: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
 }

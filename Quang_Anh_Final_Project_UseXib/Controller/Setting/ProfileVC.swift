@@ -3,22 +3,40 @@ import UIKit
 class ProfileVC: UIViewController {
     
     // MARK: - Khai báo
-    private let firstNameField = FormCV(title: "First name", placeholder: "Enter first name...")
-    private let lastNameField = FormCV(title: "Last name", placeholder: "Enter last name...")
-    private let weightField = FormCV(title: "Weight", placeholder: "Enter your weight...")
-    private let heightField = FormCV(title: "Height", placeholder: "Enter your height...")
+    private let firstNameField: FormCV = {
+        let field = FormCV(title: "First name", placeholder: "Enter first name...")
+        field.translatesAutoresizingMaskIntoConstraints = false
+        return field
+    }()
+    private let lastNameField: FormCV = {
+        let field = FormCV(title: "Last name", placeholder: "Enter last name...")
+        field.translatesAutoresizingMaskIntoConstraints = false
+        return field
+    }()
+    private let weightField: FormCV = {
+        let field = FormCV(title: "Weight", placeholder: "Enter your weight...")
+        field.translatesAutoresizingMaskIntoConstraints = false
+        return field
+    }()
+    private let heightField: FormCV = {
+        let field = FormCV(title: "Height", placeholder: "Enter your height...")
+        field.translatesAutoresizingMaskIntoConstraints = false
+        return field
+    }()
     
     private let genderLabel: UILabel = {
         let label = UILabel()
         label.text = "Gender"
         label.font = UIFont.systemFont(ofSize: 16, weight: .medium)
         label.textColor = .text
+        label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
     
-    private var genderSegment: UISegmentedControl = {
+    private let genderSegment: UISegmentedControl = {
         let segment = UISegmentedControl(items: ["Male", "Female"])
         segment.selectedSegmentIndex = 0
+        segment.translatesAutoresizingMaskIntoConstraints = false
         return segment
     }()
     
@@ -27,6 +45,7 @@ class ProfileVC: UIViewController {
         label.text = "Information"
         label.font = UIFont.systemFont(ofSize: 20, weight: .bold)
         label.textColor = .title
+        label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
     
@@ -56,6 +75,7 @@ class ProfileVC: UIViewController {
         let stack = UIStackView()
         stack.axis = .vertical
         stack.spacing = 12
+        stack.translatesAutoresizingMaskIntoConstraints = false
         return stack
     }()
     
@@ -73,7 +93,6 @@ class ProfileVC: UIViewController {
         let btn = PrimaryButton()
         btn.setTitle("Update")
         btn.setStyle(.buttonInactive)
-        
         btn.translatesAutoresizingMaskIntoConstraints = false
         return btn
     }()
@@ -84,11 +103,8 @@ class ProfileVC: UIViewController {
         self.hidesBottomBarWhenPushed = true
         view.backgroundColor = .background
         navigationItem.titleView = titleProfileVC
-        
-        setupLeftNavButton()
-        setupLayout()
+        setupUI()
         setupValidationEvents()
-        
         // Nếu có userProfile thì prefill dữ liệu
         if let profile = userProfile {
             firstNameField.textField.text = profile.firstName
@@ -111,30 +127,33 @@ class ProfileVC: UIViewController {
         navigationItem.leftBarButtonItem = leftItem
     }
     
-    // MARK: - Setup Layout
-    private func setupLayout() {
+    // MARK: - UI Setup Methods
+    private func setupUI() {
+        setupMainStack()
+        setupAddProfileButton()
+        setupConstraints()
+    }
+    private func setupMainStack() {
         view.addSubview(mainStack)
-        
         nameStack.addArrangedSubview(firstNameField)
         nameStack.addArrangedSubview(lastNameField)
-        
         genderStack.addArrangedSubview(genderLabel)
         genderStack.addArrangedSubview(genderSegment)
-        
         indexStack.addArrangedSubview(weightField)
         indexStack.addArrangedSubview(heightField)
-        
         mainStack.addArrangedSubview(nameStack)
         mainStack.addArrangedSubview(genderStack)
         mainStack.addArrangedSubview(indexStack)
-        
+    }
+    private func setupAddProfileButton() {
         view.addSubview(addProfileButton)
         addProfileButton.addTarget(self, action: #selector(handleAddProfile), for: .touchUpInside)
+    }
+    private func setupConstraints() {
         NSLayoutConstraint.activate([
             mainStack.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 24),
             mainStack.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
             mainStack.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
-            
             addProfileButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 16),
             addProfileButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -16),
             addProfileButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -16),

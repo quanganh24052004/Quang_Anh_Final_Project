@@ -1,5 +1,7 @@
+// MARK: - Import
 import UIKit
 
+// MARK: - ReportVC
 class ReportVC: UIViewController {
 
     // MARK: - Properties
@@ -11,6 +13,7 @@ class ReportVC: UIViewController {
     private let dailyAdviceView = DailyAdviceView()
     
     private let logCollectionView: UICollectionView = {
+        // NOTE: Sử dụng UICollectionViewFlowLayout, nếu muốn swipe-to-delete như UITableView hãy chuyển sang UICollectionViewListLayout hoặc UITableView
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
         layout.minimumLineSpacing = 16
@@ -131,7 +134,7 @@ extension ReportVC: UICollectionViewDataSource, UICollectionViewDelegate {
         return cell
     }
 
-    // Swipe to delete
+    // MARK: - Swipe to delete
     func collectionView(_ collectionView: UICollectionView, trailingSwipeActionsConfigurationForItemAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let deleteAction = UIContextualAction(style: .destructive, title: "Delete") { [weak self] (action, view, completionHandler) in
             guard let self = self else { completionHandler(false); return }
