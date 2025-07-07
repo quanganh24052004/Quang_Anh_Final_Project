@@ -6,8 +6,8 @@ class ProfileVC: UIViewController {
     private let firstNameField = FormCV(title: "First name", placeholder: "Enter first name...")
     private let lastNameField = FormCV(title: "Last name", placeholder: "Enter last name...")
     private let weightField = FormCV(title: "Weight", placeholder: "Enter your weight...")
-    private let `heightField` = FormCV(title: "Height", placeholder: "Enter your height...")
-    /// Segment
+    private let heightField = FormCV(title: "Height", placeholder: "Enter your height...")
+    
     private let genderLabel: UILabel = {
         let label = UILabel()
         label.text = "Gender"
@@ -22,8 +22,6 @@ class ProfileVC: UIViewController {
         return segment
     }()
     
-    /// Title
-    
     private let titleProfileVC: UILabel = {
         let label = UILabel()
         label.text = "Information"
@@ -32,10 +30,9 @@ class ProfileVC: UIViewController {
         return label
     }()
     
-
-    // MARK: Stack Views
+    // MARK: - Stack Views
     private let mainStack: UIStackView = {
-       let stack = UIStackView()
+        let stack = UIStackView()
         stack.axis = .vertical
         stack.spacing = 21
         stack.translatesAutoresizingMaskIntoConstraints = false
@@ -53,7 +50,7 @@ class ProfileVC: UIViewController {
     }()
     
     private let genderStack: UIStackView = {
-       let stack = UIStackView()
+        let stack = UIStackView()
         stack.axis = .vertical
         stack.spacing = 12
         return stack
@@ -73,23 +70,24 @@ class ProfileVC: UIViewController {
         let btn = PrimaryButton()
         btn.setTitle("Update")
         btn.setStyle(.buttonInactive)
+        
         btn.translatesAutoresizingMaskIntoConstraints = false
         return btn
     }()
+    
     // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.hidesBottomBarWhenPushed = true
         view.backgroundColor = .background
         navigationItem.titleView = titleProfileVC
         
-//        let leftItem = UIBarButtonItem(customView: titleProfileVC)
-//        navigationItem.leftBarButtonItem = leftItem
         setupLeftNavButton()
         setupLayout()
+        setupValidationEvents()
     }
     
-    // MARK: FUNCTION
+    // MARK: - Setup Nav
     private func setupLeftNavButton() {
         let leftButtonView = LeftNavButton()
         leftButtonView.iconImageView.image = UIImage(systemName: "chevron.left")
@@ -100,12 +98,10 @@ class ProfileVC: UIViewController {
         navigationItem.leftBarButtonItem = leftItem
     }
     
-    // MARK: - Constraints
+    // MARK: - Setup Layout
     private func setupLayout() {
-        // Add subviews
         view.addSubview(mainStack)
         
-        // Add arranged subviews to each stack
         nameStack.addArrangedSubview(firstNameField)
         nameStack.addArrangedSubview(lastNameField)
         
@@ -118,8 +114,9 @@ class ProfileVC: UIViewController {
         mainStack.addArrangedSubview(nameStack)
         mainStack.addArrangedSubview(genderStack)
         mainStack.addArrangedSubview(indexStack)
+        
         view.addSubview(addProfileButton)
-        // Constraints
+        addProfileButton.addTarget(self, action: #selector(handleAddProfile), for: .touchUpInside)
         NSLayoutConstraint.activate([
             mainStack.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 24),
             mainStack.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
@@ -131,8 +128,53 @@ class ProfileVC: UIViewController {
             addProfileButton.heightAnchor.constraint(equalToConstant: 56)
         ])
     }
-}
+    
+    // MARK: - Validation Setup
+    private func setupValidationEvents() {
+        [firstNameField.textField,
+         lastNameField.textField,
+         weightField.textField,
+         heightField.textField].forEach {
+            $0.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
+        }
+    }
+    
+    @objc private func textFieldDidChange(_ textField: UITextField) {
+        // Giới hạn tên tối đa 20 ký tự
+        if textField == firstNameField.textField || textField == lastNameField.textField {
+            if let text = textField.text, text.count > 20 {
+                textField.text = String(text.prefix(20))
+            }
+        }
+        
+        updateButtonState()
+    }
+    
+    @objc private func handleAddProfile() {
+        guard
+            let first = firstNameField.textField.text,
+            let last = lastNameField.textField.text,
+            let weightText = weightField.textField.text, let weight = Int(weightText),
+            let heightText = heightField.textField.text, let height = Int(heightText)
+        else { return }
 
-#Preview {
-    ProfileVC()
+        let gender = genderSegment.selectedSegmentIndex
+        let profile = UserProfile(firstName: first, lastName: last, weight: weight, height: height, genderIndex: gender)
+
+        ProfileStorage.save(profile)
+        navigationController?.popViewController(animated: true)
+    }
+    private func updateButtonState() {
+        guard
+            let firstName = firstNameField.textField.text, !firstName.isEmpty,
+            let lastName = lastNameField.textField.text, !lastName.isEmpty,
+            let weightText = weightField.textField.text, let weight = Int(weightText), (16...200).contains(weight),
+            let heightText = heightField.textField.text, let height = Int(heightText), (50...230).contains(height)
+        else {
+            addProfileButton.setStyle(.buttonInactive)
+            return
+        }
+        
+        addProfileButton.setStyle(.buttonActive)
+    }
 }

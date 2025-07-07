@@ -36,6 +36,8 @@
 		2CBC51892E1BCED900AB5745 /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CBC51882E1BCED900AB5745 /* Setting.swift */; };
 		2CBC518D2E1BD63900AB5745 /* FormCV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CBC518C2E1BD63900AB5745 /* FormCV.swift */; };
 		2CBC51912E1BD6D700AB5745 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CBC51902E1BD6D700AB5745 /* ProfileVC.swift */; };
+		2CBC51932E1BE2B300AB5745 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CBC51922E1BE2B300AB5745 /* UserProfile.swift */; };
+		2CBC51952E1BE3A200AB5745 /* MyProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CBC51942E1BE3A200AB5745 /* MyProfileVC.swift */; };
 		2CE076A52E1AE0B9006E9059 /* PremiumDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE076A32E1AE0B9006E9059 /* PremiumDetailVC.swift */; };
 /* End PBXBuildFile section */
 
@@ -71,6 +73,8 @@
 		2CBC51882E1BCED900AB5745 /* Setting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Setting.swift; sourceTree = "<group>"; };
 		2CBC518C2E1BD63900AB5745 /* FormCV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormCV.swift; sourceTree = "<group>"; };
 		2CBC51902E1BD6D700AB5745 /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
+		2CBC51922E1BE2B300AB5745 /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
+		2CBC51942E1BE3A200AB5745 /* MyProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileVC.swift; sourceTree = "<group>"; };
 		2CE076A32E1AE0B9006E9059 /* PremiumDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PremiumDetailVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -138,6 +142,7 @@
 				0856ECB82E190F64003DBAB6 /* Card.swift */,
 				2CBC51802E1B79C300AB5745 /* PulseEntry.swift */,
 				2CBC51882E1BCED900AB5745 /* Setting.swift */,
+				2CBC51922E1BE2B300AB5745 /* UserProfile.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -263,6 +268,7 @@
 			isa = PBXGroup;
 			children = (
 				2CBC51902E1BD6D700AB5745 /* ProfileVC.swift */,
+				2CBC51942E1BE3A200AB5745 /* MyProfileVC.swift */,
 			);
 			path = Setting;
 			sourceTree = "<group>";
@@ -357,8 +363,10 @@
 				2CBC517D2E1B76A100AB5745 /* LeftNavButton.swift in Sources */,
 				2CBC51792E1B703000AB5745 /* TabToLog.swift in Sources */,
 				2CBC517F2E1B785300AB5745 /* LogCell.swift in Sources */,
+				2CBC51932E1BE2B300AB5745 /* UserProfile.swift in Sources */,
 				2CBC51622E1B5A2F00AB5745 /* ReportVC.swift in Sources */,
 				2CBC51632E1B5A2F00AB5745 /* SettingsVC.swift in Sources */,
+				2CBC51952E1BE3A200AB5745 /* MyProfileVC.swift in Sources */,
 				0856ECBB2E1923EE003DBAB6 /* SelectionVC2.swift in Sources */,
 				2CE076A52E1AE0B9006E9059 /* PremiumDetailVC.swift in Sources */,
 				2CBC518D2E1BD63900AB5745 /* FormCV.swift in Sources */,

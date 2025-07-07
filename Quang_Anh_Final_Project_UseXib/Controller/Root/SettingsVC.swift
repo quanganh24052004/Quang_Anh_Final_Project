@@ -168,9 +168,15 @@ class SettingsVC: UIViewController {
         sections = [
             SettingSection(items: [
                 SettingItem(icon: UIImage(named: "ic_profile"), title: "Profile", action: { [weak self] in
-                    let vc = ProfileVC()
-                    vc.hidesBottomBarWhenPushed = true
-                    self?.navigationController?.pushViewController(vc, animated: true)
+                    if ProfileStorage.hasProfile() {
+                        let vc = MyProfileVC()
+                        vc.hidesBottomBarWhenPushed = true
+                        self?.navigationController?.pushViewController(vc, animated: true)
+                    } else {
+                        let vc = ProfileVC()
+                        vc.hidesBottomBarWhenPushed = true
+                        self?.navigationController?.pushViewController(vc, animated: true)
+                    }
                 })
             ]),
             SettingSection(items: [
