@@ -45,11 +45,18 @@ class CardCustomView: UIView {
                 checkIconView.image = UIImage(systemName: "checkmark.square.fill")
                 checkIconView.tintColor = UIColor.buttonActive
                 checkIconView.isHidden = false
+
                 checkBoxView.backgroundColor = .white
+
                 self.layer.borderColor = UIColor.buttonActive.cgColor
                 self.layer.borderWidth = 2
             } else {
                 checkIconView.isHidden = true
+
+                checkBoxView.backgroundColor = .boxCard  // hoặc màu nền mặc định
+
+                self.layer.borderColor = UIColor.clear.cgColor
+                self.layer.borderWidth = 0
             }
         }
     }

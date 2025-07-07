@@ -52,7 +52,7 @@ class FormCV: UIView {
         textField.borderStyle = .roundedRect
         textField.layer.cornerRadius = 16
         textField.layer.borderWidth = 1
-        textField.layer.borderColor = UIColor.subtitle.cgColor
+        textField.layer.borderColor = UIColor.boxCard.cgColor
         textField.clipsToBounds = true
     }
     

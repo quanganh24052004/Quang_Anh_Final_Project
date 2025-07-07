@@ -38,6 +38,7 @@
 		2CBC51912E1BD6D700AB5745 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CBC51902E1BD6D700AB5745 /* ProfileVC.swift */; };
 		2CBC51932E1BE2B300AB5745 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CBC51922E1BE2B300AB5745 /* UserProfile.swift */; };
 		2CBC51952E1BE3A200AB5745 /* MyProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CBC51942E1BE3A200AB5745 /* MyProfileVC.swift */; };
+		2CCAF5D72E1C290A00629EE2 /* EmptyLogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCAF5D62E1C290A00629EE2 /* EmptyLogView.swift */; };
 		2CE076A52E1AE0B9006E9059 /* PremiumDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE076A32E1AE0B9006E9059 /* PremiumDetailVC.swift */; };
 /* End PBXBuildFile section */
 
@@ -75,6 +76,7 @@
 		2CBC51902E1BD6D700AB5745 /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		2CBC51922E1BE2B300AB5745 /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
 		2CBC51942E1BE3A200AB5745 /* MyProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileVC.swift; sourceTree = "<group>"; };
+		2CCAF5D62E1C290A00629EE2 /* EmptyLogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyLogView.swift; sourceTree = "<group>"; };
 		2CE076A32E1AE0B9006E9059 /* PremiumDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PremiumDetailVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -251,6 +253,7 @@
 				2CBC518C2E1BD63900AB5745 /* FormCV.swift */,
 				2CBC51702E1B5B5000AB5745 /* CardCustomView.swift */,
 				2CBC51712E1B5B5000AB5745 /* PremiumCustomView.swift */,
+				2CCAF5D62E1C290A00629EE2 /* EmptyLogView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -348,6 +351,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2CBC51732E1B5B5000AB5745 /* CardCustomView.swift in Sources */,
+				2CCAF5D72E1C290A00629EE2 /* EmptyLogView.swift in Sources */,
 				2CBC51742E1B5B5000AB5745 /* PremiumCustomView.swift in Sources */,
 				2CBC516A2E1B5B1B00AB5745 /* PrimaryButton.swift in Sources */,
 				0856EC8C2E17D279003DBAB6 /* AppDelegate.swift in Sources */,

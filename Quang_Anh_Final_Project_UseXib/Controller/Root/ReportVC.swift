@@ -5,6 +5,8 @@ class ReportVC: UIViewController {
     
     let tabToLog = TabToLog()
 
+    private let emptyLogView = EmptyLogView()
+    
     private let logCollectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
@@ -44,6 +46,8 @@ class ReportVC: UIViewController {
 
         tabToLog.button.addTarget(self, action: #selector(goToLogVC), for: .touchUpInside)
 
+
+        
         view.addSubview(logCollectionView)
         NSLayoutConstraint.activate([
             logCollectionView.topAnchor.constraint(equalTo: tabToLog.bottomAnchor, constant: 24),
@@ -54,6 +58,16 @@ class ReportVC: UIViewController {
 
         logCollectionView.dataSource = self
         logCollectionView.delegate = self
+        
+        view.addSubview(emptyLogView)
+        emptyLogView.backgroundColor = .red
+        emptyLogView.translatesAutoresizingMaskIntoConstraints = false
+
+        NSLayoutConstraint.activate([
+            emptyLogView.topAnchor.constraint(equalTo: tabToLog.bottomAnchor, constant: 74),
+            emptyLogView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
+            emptyLogView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16)
+        ])
     }
 
     @objc private func goToLogVC() {
