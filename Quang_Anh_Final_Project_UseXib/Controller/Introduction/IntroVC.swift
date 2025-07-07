@@ -25,7 +25,7 @@ class IntroVC: UIViewController {
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
-
+    
     private let continueButton: PrimaryButton = {
         let btn = PrimaryButton()
         btn.setTitle("Continue")

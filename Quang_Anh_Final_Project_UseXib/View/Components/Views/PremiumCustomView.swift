@@ -20,7 +20,7 @@ class PremiumCustomView: UIView {
     
     private let titleLabel: UILabel = {
         let label = UILabel()
-        label.text = "Premium Membership"
+        label.text = "Mua bản VIP mà dùng đê"
         label.font = UIFont.systemFont(ofSize: 20, weight: .bold)
         label.textColor = .white
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -29,7 +29,7 @@ class PremiumCustomView: UIView {
     
     private let subtitleLabel: UILabel = {
         let label = UILabel()
-        label.text = "Enjoy all the benefits"
+        label.text = "Dùng chùa làm gì ???"
         label.font = UIFont.systemFont(ofSize: 14, weight: .medium)
         label.textColor = .white
         label.translatesAutoresizingMaskIntoConstraints = false

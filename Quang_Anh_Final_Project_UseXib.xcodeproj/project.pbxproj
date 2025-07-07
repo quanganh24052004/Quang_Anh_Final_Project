@@ -26,6 +26,12 @@
 		2CBC516D2E1B5B1D00AB5745 /* IntroVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CBC516B2E1B5B1D00AB5745 /* IntroVC.swift */; };
 		2CBC51732E1B5B5000AB5745 /* CardCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CBC51702E1B5B5000AB5745 /* CardCustomView.swift */; };
 		2CBC51742E1B5B5000AB5745 /* PremiumCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CBC51712E1B5B5000AB5745 /* PremiumCustomView.swift */; };
+		2CBC51762E1B64BB00AB5745 /* SettingCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CBC51752E1B64BB00AB5745 /* SettingCellTableViewCell.swift */; };
+		2CBC51792E1B703000AB5745 /* TabToLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CBC51782E1B703000AB5745 /* TabToLog.swift */; };
+		2CBC517D2E1B76A100AB5745 /* LeftNavButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CBC517C2E1B76A100AB5745 /* LeftNavButton.swift */; };
+		2CBC517F2E1B785300AB5745 /* LogCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CBC517E2E1B785300AB5745 /* LogCell.swift */; };
+		2CBC51812E1B79C300AB5745 /* PulseEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CBC51802E1B79C300AB5745 /* PulseEntry.swift */; };
+		2CBC51852E1B7B7400AB5745 /* LogVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CBC51832E1B7B7400AB5745 /* LogVC.swift */; };
 		2CE076A52E1AE0B9006E9059 /* PremiumDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE076A32E1AE0B9006E9059 /* PremiumDetailVC.swift */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +57,12 @@
 		2CBC516B2E1B5B1D00AB5745 /* IntroVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroVC.swift; sourceTree = "<group>"; };
 		2CBC51702E1B5B5000AB5745 /* CardCustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCustomView.swift; sourceTree = "<group>"; };
 		2CBC51712E1B5B5000AB5745 /* PremiumCustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PremiumCustomView.swift; sourceTree = "<group>"; };
+		2CBC51752E1B64BB00AB5745 /* SettingCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingCellTableViewCell.swift; sourceTree = "<group>"; };
+		2CBC51782E1B703000AB5745 /* TabToLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabToLog.swift; sourceTree = "<group>"; };
+		2CBC517C2E1B76A100AB5745 /* LeftNavButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftNavButton.swift; sourceTree = "<group>"; };
+		2CBC517E2E1B785300AB5745 /* LogCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogCell.swift; sourceTree = "<group>"; };
+		2CBC51802E1B79C300AB5745 /* PulseEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PulseEntry.swift; sourceTree = "<group>"; };
+		2CBC51832E1B7B7400AB5745 /* LogVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogVC.swift; sourceTree = "<group>"; };
 		2CE076A32E1AE0B9006E9059 /* PremiumDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PremiumDetailVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -116,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				0856ECB82E190F64003DBAB6 /* Card.swift */,
+				2CBC51802E1B79C300AB5745 /* PulseEntry.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -132,6 +145,7 @@
 		0856EC952E17D280003DBAB6 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				2CBC51842E1B7B7400AB5745 /* Report */,
 				2CBC51652E1B5AD000AB5745 /* Premium */,
 				2CBC516C2E1B5B1D00AB5745 /* Introduction */,
 				2CBC51602E1B5A2F00AB5745 /* Root */,
@@ -157,16 +171,6 @@
 			path = Base;
 			sourceTree = "<group>";
 		};
-		0856ECC62E1A12E0003DBAB6 /* Introduction */ = {
-			isa = PBXGroup;
-			children = (
-				0856ECA22E18C6EA003DBAB6 /* SelectionVC1.swift */,
-				0856ECBA2E1923EE003DBAB6 /* SelectionVC2.swift */,
-				0856ECBC2E1923F7003DBAB6 /* SelectionVC3.swift */,
-			);
-			path = Introduction;
-			sourceTree = "<group>";
-		};
 		2CBC51602E1B5A2F00AB5745 /* Root */ = {
 			isa = PBXGroup;
 			children = (
@@ -180,7 +184,6 @@
 		2CBC51652E1B5AD000AB5745 /* Premium */ = {
 			isa = PBXGroup;
 			children = (
-				0856ECC62E1A12E0003DBAB6 /* Introduction */,
 				2CE076A32E1AE0B9006E9059 /* PremiumDetailVC.swift */,
 			);
 			path = Premium;
@@ -200,6 +203,8 @@
 			isa = PBXGroup;
 			children = (
 				2CBC51682E1B5B1B00AB5745 /* PrimaryButton.swift */,
+				2CBC51782E1B703000AB5745 /* TabToLog.swift */,
+				2CBC517C2E1B76A100AB5745 /* LeftNavButton.swift */,
 			);
 			path = Buttons;
 			sourceTree = "<group>";
@@ -207,6 +212,9 @@
 		2CBC516C2E1B5B1D00AB5745 /* Introduction */ = {
 			isa = PBXGroup;
 			children = (
+				0856ECA22E18C6EA003DBAB6 /* SelectionVC1.swift */,
+				0856ECBA2E1923EE003DBAB6 /* SelectionVC2.swift */,
+				0856ECBC2E1923F7003DBAB6 /* SelectionVC3.swift */,
 				2CBC516B2E1B5B1D00AB5745 /* IntroVC.swift */,
 			);
 			path = Introduction;
@@ -216,6 +224,8 @@
 			isa = PBXGroup;
 			children = (
 				0856ECB62E18E566003DBAB6 /* CardCollectionViewCell.swift */,
+				2CBC51752E1B64BB00AB5745 /* SettingCellTableViewCell.swift */,
+				2CBC517E2E1B785300AB5745 /* LogCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -227,6 +237,14 @@
 				2CBC51712E1B5B5000AB5745 /* PremiumCustomView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		2CBC51842E1B7B7400AB5745 /* Report */ = {
+			isa = PBXGroup;
+			children = (
+				2CBC51832E1B7B7400AB5745 /* LogVC.swift */,
+			);
+			path = Report;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -312,14 +330,20 @@
 				0856ECA32E18C6EA003DBAB6 /* SelectionVC1.swift in Sources */,
 				0856ECBD2E1923F7003DBAB6 /* SelectionVC3.swift in Sources */,
 				0856EC962E17D280003DBAB6 /* ViewController.swift in Sources */,
+				2CBC51812E1B79C300AB5745 /* PulseEntry.swift in Sources */,
 				2CBC51612E1B5A2F00AB5745 /* MainTabBarVC.swift in Sources */,
+				2CBC517D2E1B76A100AB5745 /* LeftNavButton.swift in Sources */,
+				2CBC51792E1B703000AB5745 /* TabToLog.swift in Sources */,
+				2CBC517F2E1B785300AB5745 /* LogCell.swift in Sources */,
 				2CBC51622E1B5A2F00AB5745 /* ReportVC.swift in Sources */,
 				2CBC51632E1B5A2F00AB5745 /* SettingsVC.swift in Sources */,
 				0856ECBB2E1923EE003DBAB6 /* SelectionVC2.swift in Sources */,
 				2CE076A52E1AE0B9006E9059 /* PremiumDetailVC.swift in Sources */,
 				0856ECB72E18E566003DBAB6 /* CardCollectionViewCell.swift in Sources */,
 				0856EC8D2E17D279003DBAB6 /* SceneDelegate.swift in Sources */,
+				2CBC51762E1B64BB00AB5745 /* SettingCellTableViewCell.swift in Sources */,
 				2CBC516D2E1B5B1D00AB5745 /* IntroVC.swift in Sources */,
+				2CBC51852E1B7B7400AB5745 /* LogVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

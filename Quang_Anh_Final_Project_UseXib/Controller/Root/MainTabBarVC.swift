@@ -15,6 +15,9 @@ class MainTabBarVC: UITabBarController {
     }
     
     private func setupTabs() {
+        tabBar.layer.cornerRadius = 20
+        tabBar.backgroundColor = .white
+        tabBar.tintColor = .buttonActive
         let reportVC = ReportVC()
         let settingVC = SettingsVC()
 
@@ -30,5 +33,9 @@ class MainTabBarVC: UITabBarController {
             let nav2 = UINavigationController(rootViewController: settingVC)
 
             viewControllers = [nav1, nav2]
-        }
+    }
+}
+
+#Preview{
+    MainTabBarVC()
 }
