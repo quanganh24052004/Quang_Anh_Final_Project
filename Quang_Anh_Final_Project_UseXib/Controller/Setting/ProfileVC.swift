@@ -30,6 +30,9 @@ class ProfileVC: UIViewController {
         return label
     }()
     
+    // MARK: - Thêm biến nhận dữ liệu userProfile
+    public var userProfile: UserProfile?
+    
     // MARK: - Stack Views
     private let mainStack: UIStackView = {
         let stack = UIStackView()
@@ -85,6 +88,16 @@ class ProfileVC: UIViewController {
         setupLeftNavButton()
         setupLayout()
         setupValidationEvents()
+        
+        // Nếu có userProfile thì prefill dữ liệu
+        if let profile = userProfile {
+            firstNameField.textField.text = profile.firstName
+            lastNameField.textField.text = profile.lastName
+            weightField.textField.text = "\(profile.weight)"
+            heightField.textField.text = "\(profile.height)"
+            genderSegment.selectedSegmentIndex = profile.genderIndex
+            updateButtonState()
+        }
     }
     
     // MARK: - Setup Nav
