@@ -8,11 +8,28 @@
 import UIKit
 
 class PremiumDetailVC: UIViewController {
-
+    
+    private let titlePremium: UILabel = {
+        let label = UILabel()
+        label.text = "Premium"
+        label.font = UIFont.systemFont(ofSize: 20, weight: .bold)
+        label.textAlignment = .center
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .systemRed
-        // Do any additional setup after loading the view.
+        view.backgroundColor = .white
+        setupUI()
+    }
+    
+    private func setupUI() {
+        view.addSubview(titlePremium)
+        
+        NSLayoutConstraint.activate([
+            titlePremium.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            titlePremium.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+        ])
     }
     
 

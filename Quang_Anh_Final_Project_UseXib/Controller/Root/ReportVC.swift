@@ -1,13 +1,21 @@
-//
-//  ReportVC.swift
-//  Quang_Anh_Final_Project_UseXib
-//
-//  Created by Nguyễn Quang Anh on 6/7/25.
-//
-
 import UIKit
 
 class ReportVC: UIViewController {
+    private var data: [PulseEntry] = []
+    
+    let tabToLog = TabToLog()
+
+    private let logCollectionView: UICollectionView = {
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .vertical
+        layout.minimumLineSpacing = 16
+        layout.itemSize = CGSize(width: UIScreen.main.bounds.width - 32, height: 100)
+        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        collectionView.translatesAutoresizingMaskIntoConstraints = false
+        collectionView.backgroundColor = .clear
+        collectionView.register(LogCell.self, forCellWithReuseIdentifier: LogCell.identifier)
+        return collectionView
+    }()
 
     private let reportTitle: UILabel = {
         let title = UILabel()
@@ -18,30 +26,66 @@ class ReportVC: UIViewController {
         title.sizeToFit()
         return title
     }()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .background
 
-        // LeftTilte
         let leftItem = UIBarButtonItem(customView: reportTitle)
         navigationItem.leftBarButtonItem = leftItem
-        
-        // Button add Log
-        let tabToLog = TabToLog()
-            view.addSubview(tabToLog)
-            tabToLog.translatesAutoresizingMaskIntoConstraints = false
-            
-            NSLayoutConstraint.activate([
-                tabToLog.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 81),
-                tabToLog.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            ])
-            
-            tabToLog.button.addTarget(self, action: #selector(goToLogVC), for: .touchUpInside)
+
+        view.addSubview(tabToLog)
+        tabToLog.translatesAutoresizingMaskIntoConstraints = false
+
+        NSLayoutConstraint.activate([
+            tabToLog.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 81),
+            tabToLog.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+        ])
+
+        tabToLog.button.addTarget(self, action: #selector(goToLogVC), for: .touchUpInside)
+
+        view.addSubview(logCollectionView)
+        NSLayoutConstraint.activate([
+            logCollectionView.topAnchor.constraint(equalTo: tabToLog.bottomAnchor, constant: 24),
+            logCollectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
+            logCollectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
+            logCollectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+        ])
+
+        logCollectionView.dataSource = self
+        logCollectionView.delegate = self
     }
-    
+
     @objc private func goToLogVC() {
         let vc = LogVC()
         vc.hidesBottomBarWhenPushed = true
+        vc.onAddEntry = { [weak self] entry in
+            self?.data.append(entry)
+            self?.logCollectionView.reloadData()
+        }
+        navigationController?.pushViewController(vc, animated: true)
+    }
+}
+
+extension ReportVC: UICollectionViewDataSource, UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return data.count
+    }
+
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: LogCell.identifier, for: indexPath) as? LogCell else {
+            return UICollectionViewCell()
+        }
+        cell.configure(with: data[indexPath.item])
+        return cell
+    }
+    
+    @objc func openLogVC() {
+        let vc = LogVC()
+        vc.onAddEntry = { [weak self] entry in
+            self?.data.append(entry)
+            self?.logCollectionView.reloadData()
+        }
         navigationController?.pushViewController(vc, animated: true)
     }
 }

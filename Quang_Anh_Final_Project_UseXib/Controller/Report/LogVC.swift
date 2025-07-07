@@ -137,6 +137,13 @@ class LogVC: UIViewController {
         onAddEntry?(entry)
         navigationController?.popViewController(animated: true)
     }
+
+    func configure(with entry: PulseEntry) {
+        pulseLabel.text = "Pulse: \(entry.pulse)"
+        hrvLabel.text = "HRV: \(entry.hrv)"
+        //statusLabel.text = entry.status.rawValue
+        //statusView.backgroundColor = entry.status.color  // ← Color applied here
+    }
 }
 
 #Preview {

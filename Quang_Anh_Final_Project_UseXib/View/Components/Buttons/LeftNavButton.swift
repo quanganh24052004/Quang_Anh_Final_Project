@@ -12,7 +12,7 @@ class LeftNavButton: UIView {
     let iconImageView: UIImageView = {
         let iv = UIImageView()
         iv.image = UIImage(systemName: "chevron.left")
-        iv.tintColor = .label
+        iv.tintColor = .tintTitle
         iv.contentMode = .scaleAspectFit
         iv.translatesAutoresizingMaskIntoConstraints = false
         return iv

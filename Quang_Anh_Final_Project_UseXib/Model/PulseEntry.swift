@@ -24,3 +24,5 @@ struct PulseEntry {
         else { return .good }
     }
 }
+
+
