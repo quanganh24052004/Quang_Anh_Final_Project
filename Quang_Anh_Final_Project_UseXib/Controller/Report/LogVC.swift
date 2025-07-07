@@ -2,60 +2,17 @@ import UIKit
 
 class LogVC: UIViewController {
 
-    var onAddEntry: ((PulseEntry) -> Void)? // closure để trả dữ liệu về
-    
-    // MARK: SETUP VIEW
-    // Pulse Stack
-    private let pulseLabel: UILabel = {
-        let label = UILabel()
-        label.text = "Pulse"
-        label.textColor = .tintTitle
-        label.font = .systemFont(ofSize: 16, weight: .medium)
-        return label
-    }()
+    var onAddEntry: ((PulseEntry) -> Void)?
 
-    private let pulseField: UITextField = {
-        let field = UITextField()
-        field.placeholder = "Enter Pulse"
-        field.borderStyle = .roundedRect
-        return field
-    }()
+    // MARK: - UI Components
+    private let pulseForm = FormCV(title: "Pulse", placeholder: "Enter Pulse")
+    private let hrvForm = FormCV(title: "HRV", placeholder: "Enter HRV")
 
-    private lazy var pulseStack: UIStackView = {
-        let stack = UIStackView(arrangedSubviews: [pulseLabel, pulseField])
-        stack.axis = .vertical
-        stack.spacing = 12
-        return stack
-    }()
-
-    // MARK: - HRV Stack
-    private let hrvLabel: UILabel = {
-        let label = UILabel()
-        label.text = "HRV"
-        label.textColor = .tintTitle
-        label.font = .systemFont(ofSize: 16, weight: .medium)
-        return label
-    }()
-
-    private let hrvField: UITextField = {
-        let field = UITextField()
-        field.placeholder = "Enter HRV"
-        field.borderStyle = .roundedRect
-        return field
-    }()
-
-    private lazy var hrvStack: UIStackView = {
-        let stack = UIStackView(arrangedSubviews: [hrvLabel, hrvField])
-        stack.axis = .vertical
-        stack.spacing = 12
-        return stack
-    }()
-
-    // MARK: - Horizontal Stack
-    private lazy var horizontalStack: UIStackView = {
-        let stack = UIStackView(arrangedSubviews: [pulseStack, hrvStack])
+    private let mainStack: UIStackView = {
+        let stack = UIStackView()
         stack.axis = .horizontal
-        stack.spacing = 16
+        stack.spacing = 12
+        stack.alignment = .fill
         stack.distribution = .fillEqually
         stack.translatesAutoresizingMaskIntoConstraints = false
         return stack
@@ -68,25 +25,41 @@ class LogVC: UIViewController {
         btn.translatesAutoresizingMaskIntoConstraints = false
         return btn
     }()
-    
-    // MARK: VIEWDIDLOAD
+
+    // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.title = "Information"
         view.backgroundColor = .background
-        
+        navigationItem.title = "Information"
+
         setupLeftNavButton()
-        
-        view.addSubview(horizontalStack)
-        view.addSubview(addButton)
-        addButton.button.addTarget(self, action: #selector(handleAdd), for: .touchUpInside)
-        [pulseField, hrvField].forEach {
-            $0.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
-        }
-        setupConstraints()
+        setupLayout()
+        setupAction()
     }
-    
-    // MARK: FUNCTION
+
+    // MARK: - Setup UI
+    private func setupLayout() {
+        view.addSubview(mainStack)
+        view.addSubview(addButton)
+
+        mainStack.addArrangedSubview(pulseForm)
+        mainStack.addArrangedSubview(hrvForm)
+
+        NSLayoutConstraint.activate([
+            pulseForm.heightAnchor.constraint(equalToConstant: 80),
+            hrvForm.heightAnchor.constraint(equalToConstant: 80),
+
+            mainStack.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 24),
+            mainStack.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
+            mainStack.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
+
+            addButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 16),
+            addButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -16),
+            addButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -16),
+            addButton.heightAnchor.constraint(equalToConstant: 56)
+        ])
+    }
+
     private func setupLeftNavButton() {
         let leftButtonView = LeftNavButton()
         leftButtonView.iconImageView.image = UIImage(systemName: "chevron.left")
@@ -96,41 +69,32 @@ class LogVC: UIViewController {
         let leftItem = UIBarButtonItem(customView: leftButtonView)
         navigationItem.leftBarButtonItem = leftItem
     }
-    
-    
-    private func setupConstraints() {
-        NSLayoutConstraint.activate([
-            pulseField.heightAnchor.constraint(equalToConstant: 52),
-            hrvField.heightAnchor.constraint(equalToConstant: 52),
-            
-            horizontalStack.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor,constant: 24),
-            horizontalStack.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
-            horizontalStack.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
-        
-            addButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 16),
-            addButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -16),
-            addButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -16),
-            addButton.heightAnchor.constraint(equalToConstant: 56)
-        ])
+
+    private func setupAction() {
+        [pulseForm.textField, hrvForm.textField].forEach {
+            $0.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
+        }
+
+        addButton.button.addTarget(self, action: #selector(handleAdd), for: .touchUpInside)
     }
-    
-    // MARK: - Actions
+
+    // MARK: - Validation
     @objc private func textFieldDidChange(_ textField: UITextField) {
         guard
-            let pulseText = pulseField.text, let pulse = Int(pulseText), (1..<200).contains(pulse),
-            let hrvText = hrvField.text, let hrv = Int(hrvText), (1..<200).contains(hrv)
+            let pulseText = pulseForm.textField.text, let pulse = Int(pulseText), (1..<200).contains(pulse),
+            let hrvText = hrvForm.textField.text, let hrv = Int(hrvText), (1..<200).contains(hrv)
         else {
             addButton.setStyle(.buttonInactive)
             return
         }
-
         addButton.setStyle(.buttonActive)
     }
 
+    // MARK: - Handle Add Entry
     @objc private func handleAdd() {
         guard
-            let pulseText = pulseField.text, let pulse = Int(pulseText),
-            let hrvText = hrvField.text, let hrv = Int(hrvText)
+            let pulseText = pulseForm.textField.text, let pulse = Int(pulseText),
+            let hrvText = hrvForm.textField.text, let hrv = Int(hrvText)
         else { return }
 
         let entry = PulseEntry(pulse: pulse, hrv: hrv)
@@ -138,11 +102,10 @@ class LogVC: UIViewController {
         navigationController?.popViewController(animated: true)
     }
 
+    // MARK: - Optional: Populate existing entry
     func configure(with entry: PulseEntry) {
-        pulseLabel.text = "Pulse: \(entry.pulse)"
-        hrvLabel.text = "HRV: \(entry.hrv)"
-        //statusLabel.text = entry.status.rawValue
-        //statusView.backgroundColor = entry.status.color  // ← Color applied here
+        pulseForm.textField.text = "\(entry.pulse)"
+        hrvForm.textField.text = "\(entry.hrv)"
     }
 }
 
