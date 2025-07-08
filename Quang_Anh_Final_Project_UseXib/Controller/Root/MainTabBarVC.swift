@@ -1,10 +1,3 @@
-//
-//  MainTabBarVC.swift
-//  Quang_Anh_Final_Project_UseXib
-//
-//  Created by Nguyễn Quang Anh on 6/7/25.
-//
-
 import UIKit
 
 class MainTabBarVC: UITabBarController {

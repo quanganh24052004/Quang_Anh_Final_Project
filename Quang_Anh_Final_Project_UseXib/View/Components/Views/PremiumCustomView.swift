@@ -1,15 +1,10 @@
-//
-//  PremiumCustomView.swift
-//  Quang_Anh_Final_Project_UseXib
-//
-//  Created by iKame Elite Fresher 2025 on 7/6/25.
-//
-
 import UIKit
 
 class PremiumCustomView: UIView {
+    // MARK: - Properties
     var onTapped: (() -> Void)?
     
+    // MARK: - UI Components
     private let iconView: UIImageView = {
         let icon = UIImageView()
         icon.image = UIImage(systemName: "wand.and.stars")
@@ -36,6 +31,7 @@ class PremiumCustomView: UIView {
         return label
     }()
 
+    // MARK: - Init
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupView()
@@ -105,6 +101,6 @@ class PremiumCustomView: UIView {
     }
 }
 
-#Preview{
+#Preview {
     PremiumCustomView()
 }

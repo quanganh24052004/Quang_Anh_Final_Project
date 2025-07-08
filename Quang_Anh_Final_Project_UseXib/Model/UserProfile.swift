@@ -1,5 +1,7 @@
+// MARK: IMPORT
 import Foundation
 
+// MARK: USERPROFILE
 struct UserProfile: Codable {
     let firstName: String
     let lastName: String
@@ -8,6 +10,7 @@ struct UserProfile: Codable {
     let genderIndex: Int
 }
 
+// MARK: PROFILESTORAGE
 class ProfileStorage {
     private static let key = "user_profile"
     

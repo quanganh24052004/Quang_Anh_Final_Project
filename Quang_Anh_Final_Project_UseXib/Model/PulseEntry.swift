@@ -1,6 +1,8 @@
+// MARK: IMPORT
 import Foundation
 import UIKit
 
+// MARK: ENUM
 enum Status: String {
     case good = "Good"
     case low = "Low"
@@ -14,7 +16,8 @@ enum Status: String {
         }
     }
 }
-    
+
+// MARK: PULSEENTRY
 struct PulseEntry: Codable {
     let pulse: Int
     let hrv: Int

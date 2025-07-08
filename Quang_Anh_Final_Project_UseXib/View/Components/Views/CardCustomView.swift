@@ -1,7 +1,7 @@
 import UIKit
 
 class CardCustomView: UIView {
-    // MARK: VIEW SETUP
+    // MARK: - View Setup
     private let checkBoxView: UIView = {
         let view = UIView()
         view.backgroundColor = .boxCard
@@ -61,15 +61,14 @@ class CardCustomView: UIView {
         }
     }
 
-    // MARK: INIT FRAME
+    // MARK: - Init
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupView()
     }
 
     required init(coder: NSCoder) {
-        super.init(coder: coder)!
-        fatalError( "init(coder:) has not been implemented" )
+        fatalError("init(coder:) has not been implemented")
     }
 
     private func setupView(){
@@ -88,7 +87,7 @@ class CardCustomView: UIView {
             checkBoxView.widthAnchor.constraint(equalToConstant: 24),
             checkBoxView.heightAnchor.constraint(equalToConstant: 24),
 
-            // CheckIconView nằm khít trong CheckBoxView
+            // CheckIconView fits inside CheckBoxView
             checkIconView.topAnchor.constraint(equalTo: checkBoxView.topAnchor),
             checkIconView.bottomAnchor.constraint(equalTo: checkBoxView.bottomAnchor),
             checkIconView.leadingAnchor.constraint(equalTo: checkBoxView.leadingAnchor),
@@ -97,7 +96,7 @@ class CardCustomView: UIView {
             imageLabel.topAnchor.constraint(equalTo: checkBoxView.bottomAnchor, constant: 8),
             imageLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor),
             imageLabel.widthAnchor.constraint(equalToConstant: 64),
-            imageLabel.heightAnchor.constraint(equalTo: imageLabel.widthAnchor), // giữ tỷ lệ 1:1
+            imageLabel.heightAnchor.constraint(equalTo: imageLabel.widthAnchor), // keep 1:1 ratio
 
             titleLabel.topAnchor.constraint(equalTo: imageLabel.bottomAnchor, constant: 15),
             titleLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 16),

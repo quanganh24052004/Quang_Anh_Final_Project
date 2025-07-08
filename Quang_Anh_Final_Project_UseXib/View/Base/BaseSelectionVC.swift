@@ -1,10 +1,3 @@
-//
-//  BaseSelectionVC.swift
-//  Quang_Anh_Final_Project_UseXib
-//
-//  Created by Nguyễn Quang Anh on 5/7/25.
-//
-
 import UIKit
 
 class BaseSelectionVC: UIViewController {

@@ -1,10 +1,3 @@
-//
-//  EmptyLogView.swift
-//  Quang_Anh_Final_Project_UseXib
-//
-//  Created by iKame Elite Fresher 2025 on 7/7/25.
-//
-
 import UIKit
 
 class EmptyLogView: UIView {
@@ -76,7 +69,7 @@ class EmptyLogView: UIView {
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
-    // MARK: INIT
+    // MARK: - Init
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupUI()

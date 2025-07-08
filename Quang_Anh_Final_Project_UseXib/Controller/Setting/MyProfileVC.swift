@@ -161,9 +161,10 @@ class MyProfileVC: UIViewController {
             infoStack.leadingAnchor.constraint(equalTo: bmiCardView.leadingAnchor, constant: 12),
             infoStack.trailingAnchor.constraint(equalTo: bmiCardView.trailingAnchor, constant: -12),
             infoStack.bottomAnchor.constraint(equalTo: bmiCardView.bottomAnchor, constant: -12),
-            editButton.topAnchor.constraint(equalTo: bmiCardView.bottomAnchor, constant: 32),
+            editButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -32),
             editButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            editButton.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.7),
+            editButton.leadingAnchor.constraint(equalTo: view.leadingAnchor,constant: 16),
+            editButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
             editButton.heightAnchor.constraint(equalToConstant: 56)
         ])
     }

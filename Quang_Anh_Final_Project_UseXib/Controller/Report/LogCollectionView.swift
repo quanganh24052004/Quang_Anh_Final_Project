@@ -1,7 +1,8 @@
+// MARK: - Import
 import UIKit
 
 class LogCollectionView: UICollectionView {
-    // Khởi tạo layout mặc định
+    // MARK: - Init
     init() {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical

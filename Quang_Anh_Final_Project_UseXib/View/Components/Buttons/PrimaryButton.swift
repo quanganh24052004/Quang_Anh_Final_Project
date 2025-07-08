@@ -1,10 +1,3 @@
-//
-//  PrimaryButton.swift
-//  Quang_Anh_Final_Project_UseXib
-//
-//  Created by Nguyễn Quang Anh on 4/7/25.
-//
-
 import UIKit
 
 enum PrimaryButtonStyle {

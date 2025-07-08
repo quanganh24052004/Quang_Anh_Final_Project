@@ -1,3 +1,4 @@
+// MARK: - Import
 import UIKit
 
 class ProfileVC: UIViewController {
@@ -104,6 +105,7 @@ class ProfileVC: UIViewController {
         view.backgroundColor = .background
         navigationItem.titleView = titleProfileVC
         setupUI()
+        setupLeftNavButton()
         setupValidationEvents()
         // Nếu có userProfile thì prefill dữ liệu
         if let profile = userProfile {

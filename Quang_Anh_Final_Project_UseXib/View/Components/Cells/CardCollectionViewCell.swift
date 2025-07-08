@@ -3,7 +3,7 @@ import UIKit
 class CardCollectionViewCell: UICollectionViewCell {
     static let identifier: String = "CardCollectionViewCell"
     
-    let cardView = CardCustomView ()
+    let cardView = CardCustomView()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -18,7 +18,7 @@ class CardCollectionViewCell: UICollectionViewCell {
     }
     
     required init?(coder: NSCoder) {
-        fatalError( "init(coder:) has not been implemented" )
+        fatalError("init(coder:) has not been implemented")
     }
         
     func configure(option: CardOption, selected: Bool){
