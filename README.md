@@ -128,10 +128,10 @@ Quang_Anh_Final_Project_UseXib/
 ## 📱 Screenshots
 
 <div align="center">
-  <img src="screenshots/intro.png" alt="Introduction Screen" width="200">
-  <img src="screenshots/onboarding.png" alt="Onboarding" width="200">
-  <img src="screenshots/main.png" alt="Main Screen" width="200">
-  <img src="screenshots/profile.png" alt="Profile" width="200">
+  <img src="Screenshots/intro.png" alt="Introduction Screen" width="200">
+  <img src="Screenshots/onboarding.png" alt="Onboarding" width="200">
+  <img src="Screenshots/main.png" alt="Main Screen" width="200">
+  <img src="Screenshots/profile.png" alt="Profile" width="200">
 </div>
 
 ## 🎨 Design System
@@ -219,8 +219,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 👨‍💻 Author
 
 **Nguyễn Quang Anh**
-- GitHub: [@yourusername](https://github.com/yourusername)
-- Email: your.email@example.com
+- GitHub: [@quanganh24052004](https://github.com/quanganh24052004)
+- Email: anh.nguyenquang24052004.work@gmail.com
 
 ## 🙏 Acknowledgments
 
@@ -234,4 +234,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
   Made with ❤️ for better health monitoring
   
   **Health Guru** - Your journey to better health starts here
-</div> 
+</div>
+
+<!-- Update for commit: OKE NHÉ --> 
