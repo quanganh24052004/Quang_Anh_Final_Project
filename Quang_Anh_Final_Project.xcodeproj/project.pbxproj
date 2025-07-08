@@ -44,7 +44,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0856EC4A2E1769F7003DBAB6 /* Quang_Anh_Final_Project_UseXib.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Quang_Anh_Final_Project_UseXib.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0856EC4A2E1769F7003DBAB6 /* Quang_Anh_Final_Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Quang_Anh_Final_Project.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0856EC822E17D276003DBAB6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0856EC842E17D276003DBAB6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0856EC892E17D279003DBAB6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -96,7 +96,7 @@
 		0856EC412E1769F7003DBAB6 = {
 			isa = PBXGroup;
 			children = (
-				0856EC6C2E17CD85003DBAB6 /* Quang_Anh_Final_Project_UseXib */,
+				0856EC6C2E17CD85003DBAB6 /* Quang_Anh_Final_Project */,
 				0856EC4B2E1769F7003DBAB6 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -104,12 +104,12 @@
 		0856EC4B2E1769F7003DBAB6 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0856EC4A2E1769F7003DBAB6 /* Quang_Anh_Final_Project_UseXib.app */,
+				0856EC4A2E1769F7003DBAB6 /* Quang_Anh_Final_Project.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		0856EC6C2E17CD85003DBAB6 /* Quang_Anh_Final_Project_UseXib */ = {
+		0856EC6C2E17CD85003DBAB6 /* Quang_Anh_Final_Project */ = {
 			isa = PBXGroup;
 			children = (
 				0856EC8B2E17D279003DBAB6 /* App */,
@@ -119,7 +119,7 @@
 				0856EC992E17D282003DBAB6 /* Resources */,
 				0856EC862E17D276003DBAB6 /* Storyboards */,
 			);
-			path = Quang_Anh_Final_Project_UseXib;
+			path = Quang_Anh_Final_Project;
 			sourceTree = "<group>";
 		};
 		0856EC862E17D276003DBAB6 /* Storyboards */ = {
@@ -282,9 +282,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		0856EC492E1769F7003DBAB6 /* Quang_Anh_Final_Project_UseXib */ = {
+		0856EC492E1769F7003DBAB6 /* Quang_Anh_Final_Project */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0856EC5D2E1769F9003DBAB6 /* Build configuration list for PBXNativeTarget "Quang_Anh_Final_Project_UseXib" */;
+			buildConfigurationList = 0856EC5D2E1769F9003DBAB6 /* Build configuration list for PBXNativeTarget "Quang_Anh_Final_Project" */;
 			buildPhases = (
 				0856EC462E1769F7003DBAB6 /* Sources */,
 				0856EC472E1769F7003DBAB6 /* Frameworks */,
@@ -294,11 +294,11 @@
 			);
 			dependencies = (
 			);
-			name = Quang_Anh_Final_Project_UseXib;
+			name = Quang_Anh_Final_Project;
 			packageProductDependencies = (
 			);
 			productName = Quang_Anh_Final_Project_UseXib;
-			productReference = 0856EC4A2E1769F7003DBAB6 /* Quang_Anh_Final_Project_UseXib.app */;
+			productReference = 0856EC4A2E1769F7003DBAB6 /* Quang_Anh_Final_Project.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -316,7 +316,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 0856EC452E1769F7003DBAB6 /* Build configuration list for PBXProject "Quang_Anh_Final_Project_UseXib" */;
+			buildConfigurationList = 0856EC452E1769F7003DBAB6 /* Build configuration list for PBXProject "Quang_Anh_Final_Project" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -330,7 +330,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				0856EC492E1769F7003DBAB6 /* Quang_Anh_Final_Project_UseXib */,
+				0856EC492E1769F7003DBAB6 /* Quang_Anh_Final_Project */,
 			);
 		};
 /* End PBXProject section */
@@ -418,7 +418,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = WT5PJGD97N;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Quang_Anh_Final_Project_UseXib/Resources/Info.plist;
+				INFOPLIST_FILE = Quang_Anh_Final_Project/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -446,7 +446,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = WT5PJGD97N;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Quang_Anh_Final_Project_UseXib/Resources/Info.plist;
+				INFOPLIST_FILE = Quang_Anh_Final_Project/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -589,7 +589,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0856EC452E1769F7003DBAB6 /* Build configuration list for PBXProject "Quang_Anh_Final_Project_UseXib" */ = {
+		0856EC452E1769F7003DBAB6 /* Build configuration list for PBXProject "Quang_Anh_Final_Project" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0856EC602E1769F9003DBAB6 /* Debug */,
@@ -598,7 +598,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0856EC5D2E1769F9003DBAB6 /* Build configuration list for PBXNativeTarget "Quang_Anh_Final_Project_UseXib" */ = {
+		0856EC5D2E1769F9003DBAB6 /* Build configuration list for PBXNativeTarget "Quang_Anh_Final_Project" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0856EC5E2E1769F9003DBAB6 /* Debug */,
