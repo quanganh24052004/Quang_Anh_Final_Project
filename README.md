@@ -1,7 +1,7 @@
 # Health Guru - iOS App
 
 <div align="center">
-  <img src="Quang_Anh_Final_Project_UseXib/Resources/Assets.xcassets/AppIcon.appiconset/AppIcon.png" alt="Health Guru Logo" width="120" height="120">
+  <img src="Quang_Anh_Final_Project/Resources/Assets.xcassets/AppIcon.appiconset/AppIcon.png" alt="Health Guru Logo" width="120" height="120">
   
   **Your Personal Health Companion**
   
