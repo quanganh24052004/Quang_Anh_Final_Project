@@ -55,6 +55,7 @@
 		2CCAF5D72E1C290A00629EE2 /* EmptyLogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCAF5D62E1C290A00629EE2 /* EmptyLogView.swift */; };
 		2CCAF5D92E1C2F4100629EE2 /* DailyAdviceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCAF5D82E1C2F4000629EE2 /* DailyAdviceView.swift */; };
 		2CE076A52E1AE0B9006E9059 /* PremiumDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE076A32E1AE0B9006E9059 /* PremiumDetailVC.swift */; };
+		2CF13C442E3357CF00050C4F /* OnboardItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF13C432E3357CF00050C4F /* OnboardItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -108,6 +109,7 @@
 		2CCAF5D62E1C290A00629EE2 /* EmptyLogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyLogView.swift; sourceTree = "<group>"; };
 		2CCAF5D82E1C2F4000629EE2 /* DailyAdviceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyAdviceView.swift; sourceTree = "<group>"; };
 		2CE076A32E1AE0B9006E9059 /* PremiumDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PremiumDetailVC.swift; sourceTree = "<group>"; };
+		2CF13C432E3357CF00050C4F /* OnboardItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -243,6 +245,7 @@
 			children = (
 				2C9FEB0D2E3241490087111D /* User.swift */,
 				2C9FEB0F2E3241770087111D /* HomeViewController.swift */,
+				2CF13C432E3357CF00050C4F /* OnboardItem.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -473,6 +476,7 @@
 				2CBC516A2E1B5B1B00AB5745 /* PrimaryButton.swift in Sources */,
 				0856EC8C2E17D279003DBAB6 /* AppDelegate.swift in Sources */,
 				0856ECB92E190F64003DBAB6 /* Card.swift in Sources */,
+				2CF13C442E3357CF00050C4F /* OnboardItem.swift in Sources */,
 				2CBC51892E1BCED900AB5745 /* Setting.swift in Sources */,
 				0856ECC12E192F8A003DBAB6 /* BaseSelectionVC.swift in Sources */,
 				0856ECA32E18C6EA003DBAB6 /* SelectionVC1.swift in Sources */,

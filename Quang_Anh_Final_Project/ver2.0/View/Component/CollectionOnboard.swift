@@ -12,6 +12,15 @@ class CollectionOnboard: UIViewController {
     @IBOutlet weak var collectionOnboard: UICollectionView!
     @IBOutlet weak var buttonContinue: ButtonPrimary!
     
+    // Thay vì selectedIndex, dùng Set để lưu nhiều index được chọn
+    var selectedIndexes: Set<Int> = []
+    var items: [OnboardItem] = [
+        OnboardItem(title: "High Blood Pressure", imageName: "ic_highBloodPressure"),
+        OnboardItem(title: "Heart Rate", imageName: "ic_heartRate"),
+        OnboardItem(title: "Reduce Stress", imageName: "ic_reduceStress"),
+        // Thêm các item khác tùy ý, imageName phải đúng tên trong asset
+    ]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .background1
@@ -36,7 +45,7 @@ class CollectionOnboard: UIViewController {
 extension CollectionOnboard: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return users.count
+        return items.count
     }
     
     func collectionView(_ collectionView: UICollectionView,
@@ -45,11 +54,23 @@ extension CollectionOnboard: UICollectionViewDelegate, UICollectionViewDataSourc
             return UICollectionViewCell()
         }
         
-        let item = users[indexPath.row]
-        cell.titleCard.text = item.name
-        cell.imageCard.image = UIImage(named: item.avatar)
+        let item = items[indexPath.row]
+        cell.titleCard.text = item.title
+        cell.imageCard.image = UIImage(named: item.imageName)
+        // Gọi hàm cấu hình trạng thái chọn
+        let isSelected = selectedIndexes.contains(indexPath.row)
+        cell.configure(isSelected: isSelected)
         
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if selectedIndexes.contains(indexPath.row) {
+            selectedIndexes.remove(indexPath.row)
+        } else {
+            selectedIndexes.insert(indexPath.row)
+        }
+        collectionView.reloadData()
     }
     
     // MARK: - Layout: spacing giữa các cột
