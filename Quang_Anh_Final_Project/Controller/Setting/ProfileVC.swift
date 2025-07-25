@@ -212,3 +212,7 @@ class ProfileVC: UIViewController {
         addProfileButton.setStyle(.buttonActive)
     }
 }
+
+#Preview {
+    ProfileVC()
+}

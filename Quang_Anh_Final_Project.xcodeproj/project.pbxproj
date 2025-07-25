@@ -19,6 +19,20 @@
 		0856ECBB2E1923EE003DBAB6 /* SelectionVC2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0856ECBA2E1923EE003DBAB6 /* SelectionVC2.swift */; };
 		0856ECBD2E1923F7003DBAB6 /* SelectionVC3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0856ECBC2E1923F7003DBAB6 /* SelectionVC3.swift */; };
 		0856ECC12E192F8A003DBAB6 /* BaseSelectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0856ECC02E192F8A003DBAB6 /* BaseSelectionVC.swift */; };
+		2C9FEAE42E3217530087111D /* Intro_ver2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9FEAE22E3217530087111D /* Intro_ver2.swift */; };
+		2C9FEAE52E3217530087111D /* Intro_ver2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C9FEAE32E3217530087111D /* Intro_ver2.xib */; };
+		2C9FEAE72E3217CA0087111D /* TitleIntro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9FEAE62E3217CA0087111D /* TitleIntro.swift */; };
+		2C9FEAE92E3217D20087111D /* TitleIntro.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C9FEAE82E3217D20087111D /* TitleIntro.xib */; };
+		2C9FEAF32E3220B20087111D /* ButtonPrimary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9FEAF22E3220B20087111D /* ButtonPrimary.swift */; };
+		2C9FEAF52E3220CF0087111D /* ButtonPrimary.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C9FEAF42E3220CF0087111D /* ButtonPrimary.xib */; };
+		2C9FEAF82E322C900087111D /* Onboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9FEAF62E322C900087111D /* Onboarding.swift */; };
+		2C9FEAF92E322C900087111D /* Onboarding.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C9FEAF72E322C900087111D /* Onboarding.xib */; };
+		2C9FEB072E3239170087111D /* CardViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9FEB042E3239170087111D /* CardViewCell.swift */; };
+		2C9FEB082E3239170087111D /* CardViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C9FEB052E3239170087111D /* CardViewCell.xib */; };
+		2C9FEB0B2E323D4B0087111D /* CollectionOnboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9FEB092E323D4B0087111D /* CollectionOnboard.swift */; };
+		2C9FEB0C2E323D4B0087111D /* CollectionOnboard.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C9FEB0A2E323D4B0087111D /* CollectionOnboard.xib */; };
+		2C9FEB0E2E3241490087111D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9FEB0D2E3241490087111D /* User.swift */; };
+		2C9FEB102E3241770087111D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9FEB0F2E3241770087111D /* HomeViewController.swift */; };
 		2CBC51612E1B5A2F00AB5745 /* MainTabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CBC515D2E1B5A2F00AB5745 /* MainTabBarVC.swift */; };
 		2CBC51622E1B5A2F00AB5745 /* ReportVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CBC515E2E1B5A2F00AB5745 /* ReportVC.swift */; };
 		2CBC51632E1B5A2F00AB5745 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CBC515F2E1B5A2F00AB5745 /* SettingsVC.swift */; };
@@ -58,6 +72,20 @@
 		0856ECBA2E1923EE003DBAB6 /* SelectionVC2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionVC2.swift; sourceTree = "<group>"; };
 		0856ECBC2E1923F7003DBAB6 /* SelectionVC3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionVC3.swift; sourceTree = "<group>"; };
 		0856ECC02E192F8A003DBAB6 /* BaseSelectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseSelectionVC.swift; sourceTree = "<group>"; };
+		2C9FEAE22E3217530087111D /* Intro_ver2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Intro_ver2.swift; sourceTree = "<group>"; };
+		2C9FEAE32E3217530087111D /* Intro_ver2.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Intro_ver2.xib; sourceTree = "<group>"; };
+		2C9FEAE62E3217CA0087111D /* TitleIntro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleIntro.swift; sourceTree = "<group>"; };
+		2C9FEAE82E3217D20087111D /* TitleIntro.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TitleIntro.xib; sourceTree = "<group>"; };
+		2C9FEAF22E3220B20087111D /* ButtonPrimary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonPrimary.swift; sourceTree = "<group>"; };
+		2C9FEAF42E3220CF0087111D /* ButtonPrimary.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ButtonPrimary.xib; sourceTree = "<group>"; };
+		2C9FEAF62E322C900087111D /* Onboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding.swift; sourceTree = "<group>"; };
+		2C9FEAF72E322C900087111D /* Onboarding.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Onboarding.xib; sourceTree = "<group>"; };
+		2C9FEB042E3239170087111D /* CardViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewCell.swift; sourceTree = "<group>"; };
+		2C9FEB052E3239170087111D /* CardViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardViewCell.xib; sourceTree = "<group>"; };
+		2C9FEB092E323D4B0087111D /* CollectionOnboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionOnboard.swift; sourceTree = "<group>"; };
+		2C9FEB0A2E323D4B0087111D /* CollectionOnboard.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionOnboard.xib; sourceTree = "<group>"; };
+		2C9FEB0D2E3241490087111D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		2C9FEB0F2E3241770087111D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		2CBC515D2E1B5A2F00AB5745 /* MainTabBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarVC.swift; sourceTree = "<group>"; };
 		2CBC515E2E1B5A2F00AB5745 /* ReportVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportVC.swift; sourceTree = "<group>"; };
 		2CBC515F2E1B5A2F00AB5745 /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
@@ -112,6 +140,7 @@
 		0856EC6C2E17CD85003DBAB6 /* Quang_Anh_Final_Project */ = {
 			isa = PBXGroup;
 			children = (
+				2C9FEAD22E3211530087111D /* ver2.0 */,
 				0856EC8B2E17D279003DBAB6 /* App */,
 				0856EC8E2E17D27B003DBAB6 /* Model */,
 				0856EC952E17D280003DBAB6 /* Controller */,
@@ -188,6 +217,83 @@
 				0856ECC02E192F8A003DBAB6 /* BaseSelectionVC.swift */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		2C9FEAD22E3211530087111D /* ver2.0 */ = {
+			isa = PBXGroup;
+			children = (
+				2C9FEAD42E32121E0087111D /* Model */,
+				2C9FEAD52E3212240087111D /* ViewModel */,
+				2C9FEAD32E3211560087111D /* View */,
+			);
+			path = ver2.0;
+			sourceTree = "<group>";
+		};
+		2C9FEAD32E3211560087111D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2C9FEADB2E3215660087111D /* Views */,
+				2C9FEAD62E3212470087111D /* Component */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2C9FEAD42E32121E0087111D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2C9FEB0D2E3241490087111D /* User.swift */,
+				2C9FEB0F2E3241770087111D /* HomeViewController.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2C9FEAD52E3212240087111D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		2C9FEAD62E3212470087111D /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				2C9FEB062E3239170087111D /* Cell */,
+				2C9FEAE62E3217CA0087111D /* TitleIntro.swift */,
+				2C9FEAE82E3217D20087111D /* TitleIntro.xib */,
+				2C9FEAF22E3220B20087111D /* ButtonPrimary.swift */,
+				2C9FEAF42E3220CF0087111D /* ButtonPrimary.xib */,
+				2C9FEB092E323D4B0087111D /* CollectionOnboard.swift */,
+				2C9FEB0A2E323D4B0087111D /* CollectionOnboard.xib */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
+		2C9FEADB2E3215660087111D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2C9FEAFB2E3237E80087111D /* Base */,
+				2C9FEAE22E3217530087111D /* Intro_ver2.swift */,
+				2C9FEAE32E3217530087111D /* Intro_ver2.xib */,
+				2C9FEAF62E322C900087111D /* Onboarding.swift */,
+				2C9FEAF72E322C900087111D /* Onboarding.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		2C9FEAFB2E3237E80087111D /* Base */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		2C9FEB062E3239170087111D /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				2C9FEB042E3239170087111D /* CardViewCell.swift */,
+				2C9FEB052E3239170087111D /* CardViewCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		2CBC51602E1B5A2F00AB5745 /* Root */ = {
@@ -342,6 +448,12 @@
 			files = (
 				0856EC872E17D276003DBAB6 /* LaunchScreen.storyboard in Resources */,
 				0856EC9A2E17D282003DBAB6 /* Assets.xcassets in Resources */,
+				2C9FEAF52E3220CF0087111D /* ButtonPrimary.xib in Resources */,
+				2C9FEAE52E3217530087111D /* Intro_ver2.xib in Resources */,
+				2C9FEAE92E3217D20087111D /* TitleIntro.xib in Resources */,
+				2C9FEB0C2E323D4B0087111D /* CollectionOnboard.xib in Resources */,
+				2C9FEAF92E322C900087111D /* Onboarding.xib in Resources */,
+				2C9FEB082E3239170087111D /* CardViewCell.xib in Resources */,
 				0856EC882E17D276003DBAB6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -355,6 +467,7 @@
 			files = (
 				2CBC51732E1B5B5000AB5745 /* CardCustomView.swift in Sources */,
 				2CCAF5D92E1C2F4100629EE2 /* DailyAdviceView.swift in Sources */,
+				2C9FEAE72E3217CA0087111D /* TitleIntro.swift in Sources */,
 				2CCAF5D72E1C290A00629EE2 /* EmptyLogView.swift in Sources */,
 				2CBC51742E1B5B5000AB5745 /* PremiumCustomView.swift in Sources */,
 				2CBC516A2E1B5B1B00AB5745 /* PrimaryButton.swift in Sources */,
@@ -363,11 +476,15 @@
 				2CBC51892E1BCED900AB5745 /* Setting.swift in Sources */,
 				0856ECC12E192F8A003DBAB6 /* BaseSelectionVC.swift in Sources */,
 				0856ECA32E18C6EA003DBAB6 /* SelectionVC1.swift in Sources */,
+				2C9FEB102E3241770087111D /* HomeViewController.swift in Sources */,
 				0856ECBD2E1923F7003DBAB6 /* SelectionVC3.swift in Sources */,
 				0856EC962E17D280003DBAB6 /* ViewController.swift in Sources */,
 				2CBC51812E1B79C300AB5745 /* PulseEntry.swift in Sources */,
 				2CBC51612E1B5A2F00AB5745 /* MainTabBarVC.swift in Sources */,
+				2C9FEAE42E3217530087111D /* Intro_ver2.swift in Sources */,
 				2CBC51872E1BA9E200AB5745 /* LogCollectionView.swift in Sources */,
+				2C9FEAF82E322C900087111D /* Onboarding.swift in Sources */,
+				2C9FEB0E2E3241490087111D /* User.swift in Sources */,
 				2CBC517D2E1B76A100AB5745 /* LeftNavButton.swift in Sources */,
 				2CBC51792E1B703000AB5745 /* TabToLog.swift in Sources */,
 				2CBC517F2E1B785300AB5745 /* LogCell.swift in Sources */,
@@ -375,10 +492,13 @@
 				2CBC51622E1B5A2F00AB5745 /* ReportVC.swift in Sources */,
 				2CBC51632E1B5A2F00AB5745 /* SettingsVC.swift in Sources */,
 				2CBC51952E1BE3A200AB5745 /* MyProfileVC.swift in Sources */,
+				2C9FEAF32E3220B20087111D /* ButtonPrimary.swift in Sources */,
 				0856ECBB2E1923EE003DBAB6 /* SelectionVC2.swift in Sources */,
+				2C9FEB0B2E323D4B0087111D /* CollectionOnboard.swift in Sources */,
 				2CE076A52E1AE0B9006E9059 /* PremiumDetailVC.swift in Sources */,
 				2CBC518D2E1BD63900AB5745 /* FormCV.swift in Sources */,
 				2CBC51912E1BD6D700AB5745 /* ProfileVC.swift in Sources */,
+				2C9FEB072E3239170087111D /* CardViewCell.swift in Sources */,
 				0856ECB72E18E566003DBAB6 /* CardCollectionViewCell.swift in Sources */,
 				0856EC8D2E17D279003DBAB6 /* SceneDelegate.swift in Sources */,
 				2CBC51762E1B64BB00AB5745 /* SettingsCell.swift in Sources */,

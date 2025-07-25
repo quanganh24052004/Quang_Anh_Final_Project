@@ -16,3 +16,7 @@ class SelectionVC2: BaseSelectionVC {
         super.viewDidLoad()
     }
 }
+
+#Preview {
+    SelectionVC1()
+}

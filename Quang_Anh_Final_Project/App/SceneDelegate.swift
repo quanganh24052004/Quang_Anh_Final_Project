@@ -17,13 +17,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         // guard let _ = (scene as? UIWindowScene) else { return }
-//        guard let windowScene = (scene as? UIWindowScene) else { return }
-//        let window = UIWindow(windowScene: windowScene)
-//        let firstVC = IntroVC()
-//        let naviVC = UINavigationController(rootViewController: firstVC)
-//        window.rootViewController = naviVC
-//        self.window = window
-//        window.makeKeyAndVisible()
+        guard let windowScene = (scene as? UIWindowScene) else { return }
+        let window = UIWindow(windowScene: windowScene)
+        let firstVC = CollectionOnboard()
+        let naviVC = UINavigationController(rootViewController: firstVC)
+        window.rootViewController = naviVC
+        self.window = window
+        window.makeKeyAndVisible()
+        
 //        guard let windowScene = (scene as? UIWindowScene) else { return }
 //
 //                let window = UIWindow(windowScene: windowScene)
@@ -42,23 +43,25 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 //
 //                self.window = window
 //                window.makeKeyAndVisible()
-        guard let windowScene = (scene as? UIWindowScene) else { return }
-
-        let window = UIWindow(windowScene: windowScene)
-
-        let hasSeenIntro = UserDefaults.standard.bool(forKey: "hasSeenIntro")
-
-        if hasSeenIntro {
-            let mainTabBarVC = MainTabBarVC()
-            window.rootViewController = mainTabBarVC
-        } else {
-            let introVC = IntroVC()
-            let nav = UINavigationController(rootViewController: introVC)
-            window.rootViewController = nav
-        }
-
-        self.window = window
-        window.makeKeyAndVisible()
+        // MARK: chỗ này để main ver 1.0
+        
+//        guard let windowScene = (scene as? UIWindowScene) else { return }
+//
+//        let window = UIWindow(windowScene: windowScene)
+//
+//        let hasSeenIntro = UserDefaults.standard.bool(forKey: "hasSeenIntro")
+//
+//        if hasSeenIntro {
+//            let mainTabBarVC = MainTabBarVC()
+//            window.rootViewController = mainTabBarVC
+//        } else {
+//            let introVC = IntroVC()
+//            let nav = UINavigationController(rootViewController: introVC)
+//            window.rootViewController = nav
+//        }
+//
+//        self.window = window
+//        window.makeKeyAndVisible()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

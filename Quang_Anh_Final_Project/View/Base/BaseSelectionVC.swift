@@ -114,3 +114,6 @@ extension BaseSelectionVC: UICollectionViewDataSource, UICollectionViewDelegateF
     }
 }
 
+#Preview {
+    BaseSelectionVC()
+}

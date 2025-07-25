@@ -1,9 +1,10 @@
 import UIKit
 
-enum PrimaryButtonStyle {
-    case buttonActive // Trang thai bam duoc
-    case buttonInactive // Trang thai chua bam duoc
-}
+//enum PrimaryButtonStyle {
+//    case buttonActive // Trang thai bam duoc
+//    case buttonInactive // Trang thai chua bam duoc
+//}
+
 class PrimaryButton: UIView {
 
     // MARK: - Public button để có thể addTarget bên ngoài
