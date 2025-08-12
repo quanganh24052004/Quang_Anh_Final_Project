@@ -60,7 +60,7 @@
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="ic_tick" width="18" height="18"/>
+        <image name="ic_tick" width="24" height="24"/>
         <namedColor name="neutral2">
             <color red="0.3490196168422699" green="0.38039219379425049" blue="0.47843140363693237" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

@@ -36,7 +36,7 @@ class BaseSelectionVC: UIViewController {
     private let continueButton: PrimaryButton = {
         let btn = PrimaryButton()
         btn.setTitle("Continue")
-        btn.setStyle(.buttonInactive)
+        btn.setStyle(.neutral3)
         btn.translatesAutoresizingMaskIntoConstraints = false
         return btn
     }()
@@ -77,7 +77,7 @@ class BaseSelectionVC: UIViewController {
     }
 
     private func updateContinueButtonState() {
-        continueButton.setStyle(selectedIndices.isEmpty ? .buttonInactive : .buttonActive)
+        continueButton.setStyle(selectedIndices.isEmpty ? .neutral3 : .primary1)
     }
 
     @objc private func didTapContinue() {

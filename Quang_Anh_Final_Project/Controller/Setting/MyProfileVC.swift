@@ -67,7 +67,7 @@ class MyProfileVC: UIViewController {
     private let editButton: PrimaryButton = {
         let btn = PrimaryButton()
         btn.setTitle("Editing")
-        btn.setStyle(.buttonActive)
+        btn.setStyle(.primary1)
         btn.translatesAutoresizingMaskIntoConstraints = false
         return btn
     }()

@@ -19,7 +19,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // guard let _ = (scene as? UIWindowScene) else { return }
         guard let windowScene = (scene as? UIWindowScene) else { return }
         let window = UIWindow(windowScene: windowScene)
-        let firstVC = CollectionOnboard()
+        let firstVC = TabBar()
         let naviVC = UINavigationController(rootViewController: firstVC)
         window.rootViewController = naviVC
         self.window = window

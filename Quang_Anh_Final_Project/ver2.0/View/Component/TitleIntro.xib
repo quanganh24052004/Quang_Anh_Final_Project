@@ -20,10 +20,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mrQ-9f-d9c">
-                    <rect key="frame" x="0.0" y="117.99999999999999" width="393" height="31.333333333333329"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="38" id="WCJ-Zl-hI0"/>
-                    </constraints>
+                    <rect key="frame" x="0.0" y="118" width="393" height="666"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
                     <color key="textColor" name="neutral1"/>
                     <nil key="highlightedColor"/>

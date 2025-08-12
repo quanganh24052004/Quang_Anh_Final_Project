@@ -59,14 +59,14 @@ class PrimaryButton: UIView {
     
     func setStyle(_ style: PrimaryButtonStyle) {
         switch style {
-        case .buttonActive:
-            button.backgroundColor = .buttonActive
+        case .primary1:
+            button.backgroundColor = .primary1
             button.setTitleColor(.white, for: .normal)
             button.layer.borderWidth = 0
             button.isEnabled = true
             button.alpha = 1
-        case .buttonInactive:
-            button.backgroundColor = .buttonInactive
+        case .neutral3:
+            button.backgroundColor = .neutral3
             button.setTitleColor(.white, for: .normal)
             button.layer.borderWidth = 0
             button.isEnabled = false

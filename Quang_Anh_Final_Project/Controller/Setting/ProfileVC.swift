@@ -93,7 +93,7 @@ class ProfileVC: UIViewController {
     private let addProfileButton: PrimaryButton = {
         let btn = PrimaryButton()
         btn.setTitle("Update")
-        btn.setStyle(.buttonInactive)
+        btn.setStyle(.neutral3)
         btn.translatesAutoresizingMaskIntoConstraints = false
         return btn
     }()
@@ -205,11 +205,11 @@ class ProfileVC: UIViewController {
             let weightText = weightField.textField.text, let weight = Int(weightText), (16...200).contains(weight),
             let heightText = heightField.textField.text, let height = Int(heightText), (50...230).contains(height)
         else {
-            addProfileButton.setStyle(.buttonInactive)
+            addProfileButton.setStyle(.neutral3)
             return
         }
         
-        addProfileButton.setStyle(.buttonActive)
+        addProfileButton.setStyle(.primary1)
     }
 }
 

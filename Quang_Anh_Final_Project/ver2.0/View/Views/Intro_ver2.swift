@@ -16,7 +16,7 @@ class Intro_ver2: UIViewController {
         titleIntro.title.text = "Health Plan Pro"
         titleIntro.backgroundColor = .clear
         titleButton.buttonPrimary.setTitle("Continue", for: .normal)
-        titleButton.setStyle(.buttonActive)
+        titleButton.setStyle(.primary1)
         
         titleButton.addTarget(self, action: #selector(didTapPrimaryButton), for: .touchUpInside)
         // Do any additional setup after loading the view.
@@ -36,7 +36,7 @@ class Intro_ver2: UIViewController {
     */
     @objc private func didTapPrimaryButton() {
         // Chuyển màn
-        let nextVC = SelectionVC1()
+        let nextVC = CollectionOnboard()
         navigationController?.pushViewController(nextVC, animated: true)
     }
 }

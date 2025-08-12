@@ -23,7 +23,7 @@ class LogVC: UIViewController {
     private let addButton: PrimaryButton = {
         let btn = PrimaryButton()
         btn.setTitle("Add")
-        btn.setStyle(.buttonInactive)
+        btn.setStyle(.neutral3)
         btn.translatesAutoresizingMaskIntoConstraints = false
         return btn
     }()
@@ -92,10 +92,10 @@ class LogVC: UIViewController {
             let pulseText = pulseForm.textField.text, let pulse = Int(pulseText), (1..<200).contains(pulse),
             let hrvText = hrvForm.textField.text, let hrv = Int(hrvText), (1..<200).contains(hrv)
         else {
-            addButton.setStyle(.buttonInactive)
+            addButton.setStyle(.neutral3)
             return
         }
-        addButton.setStyle(.buttonActive)
+        addButton.setStyle(.primary1)
     }
 
     // MARK: - Handle Add Entry

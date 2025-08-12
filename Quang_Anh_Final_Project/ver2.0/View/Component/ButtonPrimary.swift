@@ -8,8 +8,8 @@
 import UIKit
 
 enum PrimaryButtonStyle {
-    case buttonActive
-    case buttonInactive
+    case primary1
+    case neutral3
 }
 
 class ButtonPrimary: UIView {
@@ -55,13 +55,13 @@ class ButtonPrimary: UIView {
 
     func setStyle(_ style: PrimaryButtonStyle) {
         switch style {
-        case .buttonActive:
+        case .primary1:
             buttonPrimary.backgroundColor = .buttonActive
             buttonPrimary.setTitleColor(.white, for: .normal)
             buttonPrimary.layer.borderWidth = 0
             buttonPrimary.isEnabled = true
             buttonPrimary.alpha = 1
-        case .buttonInactive:
+        case .neutral3:
             buttonPrimary.backgroundColor = .buttonInactive
             buttonPrimary.setTitleColor(.white, for: .normal)
             buttonPrimary.layer.borderWidth = 0
