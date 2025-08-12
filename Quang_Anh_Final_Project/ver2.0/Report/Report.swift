@@ -48,35 +48,48 @@ class Report: UIViewController {
 }
 
 extension Report: UITableViewDataSource, UITableViewDelegate {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    // 1) Mỗi section là 1 item
+    func numberOfSections(in tableView: UITableView) -> Int {
         results?.count ?? 0
     }
 
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        1
+    }
+
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat { 12 }
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? { UIView() }
+
+    // 3) Lấy data theo section (KHÔNG phải row)
     func tableView(_ tableView: UITableView,
                    cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "LogCell_ver2", for: indexPath) as! LogCell_ver2
-        let obj = results[indexPath.row]
-        // Nếu LogCell có configure:
-        // cell.configure(withPulse: obj.pulse, hrv: obj.hrv, status: obj.status)
-        // Hoặc set trực tiếp:
-        // cell.pulseLabel.text = "\(obj.pulse) bpm"
-        // cell.hrvLabel.text   = "\(obj.hrv) ms"
-        // cell.statusDot.backgroundColor = obj.statusColor
+        let obj = results[indexPath.section]   // ⬅️ quan trọng
+
+        cell.pulseValue.text = "\(obj.pulse)"
+        cell.pulseValue.textColor = obj.statusColor
+        cell.bpm.textColor = obj.statusColor
+        cell.hvrValue.text = "\(obj.hrv)"
+        cell.hvrValue.textColor = obj.statusColor
+        cell.ms.textColor = obj.statusColor
+        cell.statusLabel.textColor = obj.statusColor
+        cell.statusLabel.text = obj.status.rawValue
+    
         return cell
     }
 
-    // Xoá
-    func tableView(_ tableView: UITableView,
-                   trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-        let delete = UIContextualAction(style: .destructive, title: "Xoá") { _,_,done in
-            do {
-                try RealmManager.delete(self.results[indexPath.row])
-                done(true)
-            } catch {
-                print("Delete error: \(error)")
-                done(false)
-            }
-        }
-        return UISwipeActionsConfiguration(actions: [delete])
-    }
+//     Xoá
+//    func tableView(_ tableView: UITableView,
+//                   trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+//        let delete = UIContextualAction(style: .destructive, title: "Xoá") { _,_,done in
+//            do {
+//                try RealmManager.delete(self.results[indexPath.row])
+//                done(true)
+//            } catch {
+//                print("Delete error: \(error)")
+//                done(false)
+//            }
+//        }
+//        return UISwipeActionsConfiguration(actions: [delete])
+//    }
 }

@@ -19,7 +19,6 @@ class AddLog: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // UI Screen
         view.backgroundColor = .background1
         self.navigationController?.setNavigationBarHidden(true, animated: false)
         [pulseView, hrvView].forEach { v in
@@ -27,14 +26,12 @@ class AddLog: UIViewController {
             v?.layer.cornerCurve  = .continuous
             v?.layer.borderWidth  = 1
             v?.layer.borderColor  = UIColor.neutral4.cgColor
-            v?.layer.masksToBounds = true   // cần clip theo bo góc
+            v?.layer.masksToBounds = true
         }
         
         addLogButton.buttonPrimary.setTitle(NSLocalizedString("Add", comment: ""), for: .normal)
         
         addLogButton.addTarget(self, action: #selector(addLog), for: .touchUpInside)
-        
-        
     }
 
 
@@ -45,7 +42,7 @@ class AddLog: UIViewController {
     @objc func addLog() {
         view.endEditing(true)
 
-        // 1) Validate input
+        // Validate input
         guard let pText = pulseTF.text?.trimmingCharacters(in: .whitespacesAndNewlines),
               let hText = HRVTF.text?.trimmingCharacters(in: .whitespacesAndNewlines),
               let pulse = Int(pText), let hrv = Int(hText),
@@ -54,12 +51,12 @@ class AddLog: UIViewController {
             return
         }
 
-        // 2) Ghi vào Realm (dùng RealmManager ở trên)
+        // Ghi vào Realm (dùng RealmManager ở trên)
         do {
             let entry = PulseEntry(pulse: pulse, hrv: hrv)
             try RealmManager.add(entry)
 
-            // 3) Đóng màn thêm (Report sẽ tự reload qua NotificationToken)
+            // Đóng màn thêm (Report sẽ tự reload qua NotificationToken)
             dismiss(animated: true)
         } catch {
             showAlert("Không lưu được vào Realm.\n\(error.localizedDescription)")

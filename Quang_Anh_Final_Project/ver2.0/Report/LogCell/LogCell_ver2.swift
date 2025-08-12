@@ -9,6 +9,7 @@ import UIKit
 
 class LogCell_ver2: UITableViewCell {
 
+    
     @IBOutlet weak var containerView: UIView!
     
     @IBOutlet weak var pulseValue: UILabel!
@@ -21,13 +22,18 @@ class LogCell_ver2: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        containerView.layer.cornerRadius = 16
+        setupUI()
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+        self.layer.cornerRadius = 16
+        self.layer.masksToBounds = true
     }
-    
+    func setupUI() {
+        containerView.layer.cornerRadius = 16
+        containerView.layer.masksToBounds = true
+        
+
+    }
 }

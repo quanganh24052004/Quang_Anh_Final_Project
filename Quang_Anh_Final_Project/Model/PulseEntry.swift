@@ -10,9 +10,9 @@ enum Status: String {
 
     var color: UIColor {
         switch self {
-        case .good: return UIColor(named: "good") ?? .green
-        case .low: return UIColor(named: "low") ?? .blue
-        case .warning: return UIColor(named: "warning") ?? .orange
+        case .good: return UIColor(named: "good") ?? .good00
+        case .low: return UIColor(named: "low") ?? .low00
+        case .warning: return UIColor(named: "warning") ?? .warning00
         }
     }
 }

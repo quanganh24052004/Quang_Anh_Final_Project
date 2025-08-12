@@ -10,7 +10,6 @@ import RealmSwift
 
 enum RealmManager {
     static func realm() throws -> Realm {
-        // Có thể tuỳ biến Configuration tại đây (migration, fileURL, ...).
         return try Realm()
     }
 
