@@ -28,7 +28,6 @@ class AddLog: UIViewController {
             v?.layer.borderWidth  = 1
             v?.layer.borderColor  = UIColor.neutral4.cgColor
             v?.layer.masksToBounds = true   // cần clip theo bo góc
-            v?.backgroundColor = .systemBackground
         }
         
         addLogButton.buttonPrimary.setTitle(NSLocalizedString("Add", comment: ""), for: .normal)
@@ -44,6 +43,32 @@ class AddLog: UIViewController {
     }
     
     @objc func addLog() {
-        
+        view.endEditing(true)
+
+        // 1) Validate input
+        guard let pText = pulseTF.text?.trimmingCharacters(in: .whitespacesAndNewlines),
+              let hText = HRVTF.text?.trimmingCharacters(in: .whitespacesAndNewlines),
+              let pulse = Int(pText), let hrv = Int(hText),
+              (30...220).contains(pulse), hrv > 0 else {
+            showAlert("Vui lòng nhập số hợp lệ. Ví dụ: Pulse 60–100, HRV > 0.")
+            return
+        }
+
+        // 2) Ghi vào Realm (dùng RealmManager ở trên)
+        do {
+            let entry = PulseEntry(pulse: pulse, hrv: hrv)
+            try RealmManager.add(entry)
+
+            // 3) Đóng màn thêm (Report sẽ tự reload qua NotificationToken)
+            dismiss(animated: true)
+        } catch {
+            showAlert("Không lưu được vào Realm.\n\(error.localizedDescription)")
+        }
+    }
+
+    private func showAlert(_ message: String) {
+        let ac = UIAlertController(title: "Thông báo", message: message, preferredStyle: .alert)
+        ac.addAction(UIAlertAction(title: "OK", style: .default))
+        present(ac, animated: true)
     }
 }

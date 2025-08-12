@@ -48,7 +48,6 @@
 		2CBC51762E1B64BB00AB5745 /* SettingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CBC51752E1B64BB00AB5745 /* SettingsCell.swift */; };
 		2CBC51792E1B703000AB5745 /* TabToLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CBC51782E1B703000AB5745 /* TabToLog.swift */; };
 		2CBC517D2E1B76A100AB5745 /* LeftNavButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CBC517C2E1B76A100AB5745 /* LeftNavButton.swift */; };
-		2CBC517F2E1B785300AB5745 /* LogCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CBC517E2E1B785300AB5745 /* LogCell.swift */; };
 		2CBC51812E1B79C300AB5745 /* PulseEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CBC51802E1B79C300AB5745 /* PulseEntry.swift */; };
 		2CBC51852E1B7B7400AB5745 /* LogVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CBC51832E1B7B7400AB5745 /* LogVC.swift */; };
 		2CBC51872E1BA9E200AB5745 /* LogCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CBC51862E1BA9E200AB5745 /* LogCollectionView.swift */; };
@@ -59,6 +58,10 @@
 		2CBC51952E1BE3A200AB5745 /* MyProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CBC51942E1BE3A200AB5745 /* MyProfileVC.swift */; };
 		2CCAF5D72E1C290A00629EE2 /* EmptyLogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCAF5D62E1C290A00629EE2 /* EmptyLogView.swift */; };
 		2CCAF5D92E1C2F4100629EE2 /* DailyAdviceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCAF5D82E1C2F4000629EE2 /* DailyAdviceView.swift */; };
+		2CD779182E4B3A3C003DEFFB /* HealthLogManage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD779172E4B3A3C003DEFFB /* HealthLogManage.swift */; };
+		2CD7791C2E4B3B32003DEFFB /* LogCell_ver2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CD7791B2E4B3B32003DEFFB /* LogCell_ver2.xib */; };
+		2CD7791D2E4B3B32003DEFFB /* LogCell_ver2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD7791A2E4B3B32003DEFFB /* LogCell_ver2.swift */; };
+		2CD7791F2E4B4651003DEFFB /* LogCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD7791E2E4B4651003DEFFB /* LogCell.swift */; };
 		2CDFED1D2E4B3546003DDB84 /* HealthLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDFED1C2E4B3546003DDB84 /* HealthLog.swift */; };
 		2CE076A52E1AE0B9006E9059 /* PremiumDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE076A32E1AE0B9006E9059 /* PremiumDetailVC.swift */; };
 		2CF13C442E3357CF00050C4F /* OnboardItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF13C432E3357CF00050C4F /* OnboardItem.swift */; };
@@ -111,7 +114,6 @@
 		2CBC51752E1B64BB00AB5745 /* SettingsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCell.swift; sourceTree = "<group>"; };
 		2CBC51782E1B703000AB5745 /* TabToLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabToLog.swift; sourceTree = "<group>"; };
 		2CBC517C2E1B76A100AB5745 /* LeftNavButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftNavButton.swift; sourceTree = "<group>"; };
-		2CBC517E2E1B785300AB5745 /* LogCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogCell.swift; sourceTree = "<group>"; };
 		2CBC51802E1B79C300AB5745 /* PulseEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PulseEntry.swift; sourceTree = "<group>"; };
 		2CBC51832E1B7B7400AB5745 /* LogVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogVC.swift; sourceTree = "<group>"; };
 		2CBC51862E1BA9E200AB5745 /* LogCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogCollectionView.swift; sourceTree = "<group>"; };
@@ -122,6 +124,10 @@
 		2CBC51942E1BE3A200AB5745 /* MyProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileVC.swift; sourceTree = "<group>"; };
 		2CCAF5D62E1C290A00629EE2 /* EmptyLogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyLogView.swift; sourceTree = "<group>"; };
 		2CCAF5D82E1C2F4000629EE2 /* DailyAdviceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyAdviceView.swift; sourceTree = "<group>"; };
+		2CD779172E4B3A3C003DEFFB /* HealthLogManage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthLogManage.swift; sourceTree = "<group>"; };
+		2CD7791A2E4B3B32003DEFFB /* LogCell_ver2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogCell_ver2.swift; sourceTree = "<group>"; };
+		2CD7791B2E4B3B32003DEFFB /* LogCell_ver2.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LogCell_ver2.xib; sourceTree = "<group>"; };
+		2CD7791E2E4B4651003DEFFB /* LogCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogCell.swift; sourceTree = "<group>"; };
 		2CDFED1C2E4B3546003DDB84 /* HealthLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthLog.swift; sourceTree = "<group>"; };
 		2CE076A32E1AE0B9006E9059 /* PremiumDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PremiumDetailVC.swift; sourceTree = "<group>"; };
 		2CF13C432E3357CF00050C4F /* OnboardItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardItem.swift; sourceTree = "<group>"; };
@@ -170,6 +176,7 @@
 		0856EC6C2E17CD85003DBAB6 /* Quang_Anh_Final_Project */ = {
 			isa = PBXGroup;
 			children = (
+				2CD779162E4B3A13003DEFFB /* DataBase */,
 				2C9FEAD22E3211530087111D /* ver2.0 */,
 				0856EC8B2E17D279003DBAB6 /* App */,
 				0856EC8E2E17D27B003DBAB6 /* Model */,
@@ -206,7 +213,6 @@
 				2CBC51802E1B79C300AB5745 /* PulseEntry.swift */,
 				2CBC51882E1BCED900AB5745 /* Setting.swift */,
 				2CBC51922E1BE2B300AB5745 /* UserProfile.swift */,
-				2CDFED1C2E4B3546003DDB84 /* HealthLog.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -621,6 +627,7 @@
 		2CAF6B972E3F0ED900F24E72 /* Report */ = {
 			isa = PBXGroup;
 			children = (
+				2CD779192E4B3B16003DEFFB /* LogCell */,
 				2C7F894D2E3F6B420020BB51 /* AddLog */,
 				2CAF6BA12E3F56B700F24E72 /* Report.swift */,
 				2CAF6BA22E3F56B700F24E72 /* Report.xib */,
@@ -698,7 +705,7 @@
 			children = (
 				0856ECB62E18E566003DBAB6 /* CardCollectionViewCell.swift */,
 				2CBC51752E1B64BB00AB5745 /* SettingsCell.swift */,
-				2CBC517E2E1B785300AB5745 /* LogCell.swift */,
+				2CD7791E2E4B4651003DEFFB /* LogCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -731,6 +738,24 @@
 				2CBC51942E1BE3A200AB5745 /* MyProfileVC.swift */,
 			);
 			path = Setting;
+			sourceTree = "<group>";
+		};
+		2CD779162E4B3A13003DEFFB /* DataBase */ = {
+			isa = PBXGroup;
+			children = (
+				2CDFED1C2E4B3546003DDB84 /* HealthLog.swift */,
+				2CD779172E4B3A3C003DEFFB /* HealthLogManage.swift */,
+			);
+			path = DataBase;
+			sourceTree = "<group>";
+		};
+		2CD779192E4B3B16003DEFFB /* LogCell */ = {
+			isa = PBXGroup;
+			children = (
+				2CD7791A2E4B3B32003DEFFB /* LogCell_ver2.swift */,
+				2CD7791B2E4B3B32003DEFFB /* LogCell_ver2.xib */,
+			);
+			path = LogCell;
 			sourceTree = "<group>";
 		};
 		2CF13C452E33686000050C4F /* Onboarding */ = {
@@ -818,6 +843,7 @@
 				2C9FEAE52E3217530087111D /* Intro_ver2.xib in Resources */,
 				2C7F89502E3F6D0C0020BB51 /* AddLog.xib in Resources */,
 				2C9FEB0C2E323D4B0087111D /* CollectionOnboard.xib in Resources */,
+				2CD7791C2E4B3B32003DEFFB /* LogCell_ver2.xib in Resources */,
 				0856EC882E17D276003DBAB6 /* Main.storyboard in Resources */,
 				2CA46CAC2E4B2C7B00D00DD3 /* CardViewCell.xib in Resources */,
 				2CA46CAD2E4B2C7B00D00DD3 /* ButtonPrimary.xib in Resources */,
@@ -899,13 +925,14 @@
 				0856ECBD2E1923F7003DBAB6 /* SelectionVC3.swift in Sources */,
 				0856EC962E17D280003DBAB6 /* ViewController.swift in Sources */,
 				2CBC51812E1B79C300AB5745 /* PulseEntry.swift in Sources */,
+				2CD7791F2E4B4651003DEFFB /* LogCell.swift in Sources */,
+				2CD7791D2E4B3B32003DEFFB /* LogCell_ver2.swift in Sources */,
 				2CBC51612E1B5A2F00AB5745 /* MainTabBarVC.swift in Sources */,
 				2C9FEAE42E3217530087111D /* Intro_ver2.swift in Sources */,
 				2CBC51872E1BA9E200AB5745 /* LogCollectionView.swift in Sources */,
 				2CBC517D2E1B76A100AB5745 /* LeftNavButton.swift in Sources */,
 				2CBC51792E1B703000AB5745 /* TabToLog.swift in Sources */,
 				2CDFED1D2E4B3546003DDB84 /* HealthLog.swift in Sources */,
-				2CBC517F2E1B785300AB5745 /* LogCell.swift in Sources */,
 				2CAF6B9B2E3F529700F24E72 /* TabBar.swift in Sources */,
 				2CBC51932E1BE2B300AB5745 /* UserProfile.swift in Sources */,
 				2CBC51622E1B5A2F00AB5745 /* ReportVC.swift in Sources */,
@@ -920,6 +947,7 @@
 				0856ECB72E18E566003DBAB6 /* CardCollectionViewCell.swift in Sources */,
 				0856EC8D2E17D279003DBAB6 /* SceneDelegate.swift in Sources */,
 				2CBC51762E1B64BB00AB5745 /* SettingsCell.swift in Sources */,
+				2CD779182E4B3A3C003DEFFB /* HealthLogManage.swift in Sources */,
 				2CBC516D2E1B5B1D00AB5745 /* IntroVC.swift in Sources */,
 				2CBC51852E1B7B7400AB5745 /* LogVC.swift in Sources */,
 			);

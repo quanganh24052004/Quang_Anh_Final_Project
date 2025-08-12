@@ -6,20 +6,77 @@
 //
 
 import UIKit
+import RealmSwift
 
 class Report: UIViewController {
+    
+    @IBOutlet weak var logData: UITableView!
+    
+    private var token: NotificationToken?
+    private var results: Results<PulseEntryObject>!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .background1
+        logData.dataSource = self
+        logData.delegate = self
+        logData.rowHeight = UITableView.automaticDimension
+        logData.estimatedRowHeight = 80
+        logData.register(UINib(nibName: "LogCell_ver2", bundle: nil),
+                         forCellReuseIdentifier: "LogCell_ver2")
         
-        // Do any additional setup after loading the view.
+        do {
+            results = try RealmManager.all()
+            // Quan sát thay đổi để reload tự động
+            token = results.observe { [weak self] _ in
+                self?.logData.reloadData()
+            }
+        } catch {
+            print("Realm error: \(error)")
+        }
     }
-
+    
+    deinit { token?.invalidate() }
+    
     @IBAction func tapToLog(sender: Any) {
         let addLogVC = AddLog(nibName: "AddLog", bundle: nil)
         addLogVC.modalPresentationStyle = .fullScreen   // iOS 13+: dạng sheet/card
         addLogVC.modalTransitionStyle = .coverVertical // hiệu ứng trượt lên
         present(addLogVC, animated: true)
+    }
+    
+}
+
+extension Report: UITableViewDataSource, UITableViewDelegate {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        results?.count ?? 0
+    }
+
+    func tableView(_ tableView: UITableView,
+                   cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "LogCell_ver2", for: indexPath) as! LogCell_ver2
+        let obj = results[indexPath.row]
+        // Nếu LogCell có configure:
+        // cell.configure(withPulse: obj.pulse, hrv: obj.hrv, status: obj.status)
+        // Hoặc set trực tiếp:
+        // cell.pulseLabel.text = "\(obj.pulse) bpm"
+        // cell.hrvLabel.text   = "\(obj.hrv) ms"
+        // cell.statusDot.backgroundColor = obj.statusColor
+        return cell
+    }
+
+    // Xoá
+    func tableView(_ tableView: UITableView,
+                   trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let delete = UIContextualAction(style: .destructive, title: "Xoá") { _,_,done in
+            do {
+                try RealmManager.delete(self.results[indexPath.row])
+                done(true)
+            } catch {
+                print("Delete error: \(error)")
+                done(false)
+            }
+        }
+        return UISwipeActionsConfiguration(actions: [delete])
     }
 }
