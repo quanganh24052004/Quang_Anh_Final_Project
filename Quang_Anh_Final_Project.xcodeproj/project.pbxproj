@@ -19,6 +19,8 @@
 		0856ECBB2E1923EE003DBAB6 /* SelectionVC2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0856ECBA2E1923EE003DBAB6 /* SelectionVC2.swift */; };
 		0856ECBD2E1923F7003DBAB6 /* SelectionVC3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0856ECBC2E1923F7003DBAB6 /* SelectionVC3.swift */; };
 		0856ECC12E192F8A003DBAB6 /* BaseSelectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0856ECC02E192F8A003DBAB6 /* BaseSelectionVC.swift */; };
+		2C63F2442E4C2A5200602C1A /* SettingCell_ver2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C63F2422E4C2A5200602C1A /* SettingCell_ver2.swift */; };
+		2C63F2452E4C2A5200602C1A /* SettingCell_ver2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C63F2432E4C2A5200602C1A /* SettingCell_ver2.xib */; };
 		2C7F89502E3F6D0C0020BB51 /* AddLog.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C7F894F2E3F6D0C0020BB51 /* AddLog.xib */; };
 		2C7F89512E3F6D0C0020BB51 /* AddLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7F894E2E3F6D0C0020BB51 /* AddLog.swift */; };
 		2C9FEAE42E3217530087111D /* Intro_ver2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9FEAE22E3217530087111D /* Intro_ver2.swift */; };
@@ -85,6 +87,8 @@
 		0856ECC02E192F8A003DBAB6 /* BaseSelectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseSelectionVC.swift; sourceTree = "<group>"; };
 		0DBECA37485E9522CC4F398D /* Pods-Quang_Anh_Final_Project.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Quang_Anh_Final_Project.release.xcconfig"; path = "Target Support Files/Pods-Quang_Anh_Final_Project/Pods-Quang_Anh_Final_Project.release.xcconfig"; sourceTree = "<group>"; };
 		11EFBB71587E8FAA148E9A12 /* Pods-Quang_Anh_Final_Project.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Quang_Anh_Final_Project.debug.xcconfig"; path = "Target Support Files/Pods-Quang_Anh_Final_Project/Pods-Quang_Anh_Final_Project.debug.xcconfig"; sourceTree = "<group>"; };
+		2C63F2422E4C2A5200602C1A /* SettingCell_ver2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingCell_ver2.swift; sourceTree = "<group>"; };
+		2C63F2432E4C2A5200602C1A /* SettingCell_ver2.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingCell_ver2.xib; sourceTree = "<group>"; };
 		2C7F894E2E3F6D0C0020BB51 /* AddLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLog.swift; sourceTree = "<group>"; };
 		2C7F894F2E3F6D0C0020BB51 /* AddLog.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddLog.xib; sourceTree = "<group>"; };
 		2C9FEAE22E3217530087111D /* Intro_ver2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Intro_ver2.swift; sourceTree = "<group>"; };
@@ -256,6 +260,15 @@
 			path = Base;
 			sourceTree = "<group>";
 		};
+		2C63F2412E4C2A3900602C1A /* SettingCell_ver2 */ = {
+			isa = PBXGroup;
+			children = (
+				2C63F2422E4C2A5200602C1A /* SettingCell_ver2.swift */,
+				2C63F2432E4C2A5200602C1A /* SettingCell_ver2.xib */,
+			);
+			path = SettingCell_ver2;
+			sourceTree = "<group>";
+		};
 		2C7F894D2E3F6B420020BB51 /* AddLog */ = {
 			isa = PBXGroup;
 			children = (
@@ -362,6 +375,7 @@
 		2CAF6B762E3F0D9900F24E72 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
+				2C63F2412E4C2A3900602C1A /* SettingCell_ver2 */,
 				2CAF6BA52E3F56C700F24E72 /* Settings.swift */,
 				2CAF6BA62E3F56C700F24E72 /* Settings.xib */,
 				2CAF6B7A2E3F0E8600F24E72 /* Profile */,
@@ -841,6 +855,7 @@
 				2CAF6BA32E3F56B700F24E72 /* Report.xib in Resources */,
 				2CAF6BA72E3F56C700F24E72 /* Settings.xib in Resources */,
 				2C9FEAE52E3217530087111D /* Intro_ver2.xib in Resources */,
+				2C63F2452E4C2A5200602C1A /* SettingCell_ver2.xib in Resources */,
 				2C7F89502E3F6D0C0020BB51 /* AddLog.xib in Resources */,
 				2C9FEB0C2E323D4B0087111D /* CollectionOnboard.xib in Resources */,
 				2CD7791C2E4B3B32003DEFFB /* LogCell_ver2.xib in Resources */,
@@ -936,6 +951,7 @@
 				2CAF6B9B2E3F529700F24E72 /* TabBar.swift in Sources */,
 				2CBC51932E1BE2B300AB5745 /* UserProfile.swift in Sources */,
 				2CBC51622E1B5A2F00AB5745 /* ReportVC.swift in Sources */,
+				2C63F2442E4C2A5200602C1A /* SettingCell_ver2.swift in Sources */,
 				2CBC51632E1B5A2F00AB5745 /* SettingsVC.swift in Sources */,
 				2CBC51952E1BE3A200AB5745 /* MyProfileVC.swift in Sources */,
 				0856ECBB2E1923EE003DBAB6 /* SelectionVC2.swift in Sources */,

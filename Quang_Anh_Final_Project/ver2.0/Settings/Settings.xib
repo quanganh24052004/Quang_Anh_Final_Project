@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Settings" customModule="Quang_Anh_Final_Project" customModuleProvider="target">
             <connections>
+                <outlet property="settingTableView" destination="RxT-uF-kVY" id="khu-K0-4Zz"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -27,23 +28,47 @@
                     <color key="textColor" name="neutral1"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_premium" translatesAutoresizingMaskIntoConstraints="NO" id="aHB-IM-Lk9">
+                    <rect key="frame" x="16" y="104" width="361" height="104"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="104" id="bjq-Ll-UPN"/>
+                    </constraints>
+                </imageView>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="RxT-uF-kVY">
+                    <rect key="frame" x="16" y="224" width="361" height="544"/>
+                    <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="separatorColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="sectionIndexBackgroundColor" name="neutral5"/>
+                    <color key="sectionIndexTrackingBackgroundColor" name="neutral5"/>
+                </tableView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" name="background1"/>
             <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="aHB-IM-Lk9" secondAttribute="trailing" constant="16" id="2Ga-Hs-eNu"/>
+                <constraint firstItem="RxT-uF-kVY" firstAttribute="top" secondItem="aHB-IM-Lk9" secondAttribute="bottom" constant="16" id="9g3-1B-j51"/>
                 <constraint firstItem="pw7-H2-Xap" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="AL7-Xp-KAF"/>
+                <constraint firstItem="RxT-uF-kVY" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="VHl-8J-ihs"/>
+                <constraint firstItem="aHB-IM-Lk9" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="eBA-3P-k2i"/>
+                <constraint firstItem="aHB-IM-Lk9" firstAttribute="top" secondItem="pw7-H2-Xap" secondAttribute="bottom" constant="16" id="kdK-Td-EoK"/>
                 <constraint firstItem="pw7-H2-Xap" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="44" id="ukU-8j-fPW"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="RxT-uF-kVY" secondAttribute="bottom" constant="16" id="vGZ-nv-o9E"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="pw7-H2-Xap" secondAttribute="trailing" constant="16" id="vbe-K4-yBE"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="RxT-uF-kVY" secondAttribute="trailing" constant="16" id="yWd-A0-x9c"/>
             </constraints>
-            <point key="canvasLocation" x="132" y="-11"/>
+            <point key="canvasLocation" x="130.53435114503816" y="-11.267605633802818"/>
         </view>
     </objects>
     <resources>
+        <image name="img_premium" width="343" height="104"/>
         <namedColor name="background1">
             <color red="0.96078431606292725" green="0.96078431606292725" blue="0.97254902124404907" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="neutral1">
             <color red="0.18431374430656433" green="0.2078431248664856" blue="0.28627452254295349" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="neutral5">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

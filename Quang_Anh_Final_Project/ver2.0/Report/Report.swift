@@ -48,7 +48,6 @@ class Report: UIViewController {
 }
 
 extension Report: UITableViewDataSource, UITableViewDelegate {
-    // 1) Mỗi section là 1 item
     func numberOfSections(in tableView: UITableView) -> Int {
         results?.count ?? 0
     }
@@ -60,7 +59,6 @@ extension Report: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat { 12 }
     func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? { UIView() }
 
-    // 3) Lấy data theo section (KHÔNG phải row)
     func tableView(_ tableView: UITableView,
                    cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "LogCell_ver2", for: indexPath) as! LogCell_ver2

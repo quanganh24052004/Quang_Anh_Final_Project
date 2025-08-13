@@ -33,7 +33,5 @@ class LogCell_ver2: UITableViewCell {
     func setupUI() {
         containerView.layer.cornerRadius = 16
         containerView.layer.masksToBounds = true
-        
-
     }
 }
