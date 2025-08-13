@@ -50,6 +50,9 @@ class CollectionOnboard: UIViewController {
 //    }
     
     @objc private func didTapPrimaryButton() {
+        // ✅ Đánh dấu đã xem Intro
+        UserDefaults.standard.set(true, forKey: "hasSeenIntro")
+        
         let nextVC = TabBar()
         navigationController?.pushViewController(nextVC, animated: true)
     }

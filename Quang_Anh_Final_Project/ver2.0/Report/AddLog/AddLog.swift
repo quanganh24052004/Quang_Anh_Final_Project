@@ -54,7 +54,7 @@ class AddLog: UIViewController {
         // Ghi vào Realm (dùng RealmManager ở trên)
         do {
             let entry = PulseEntry(pulse: pulse, hrv: hrv)
-            try RealmManager.add(entry)
+            try PulseLogRealmManager.add(entry)
 
             // Đóng màn thêm (Report sẽ tự reload qua NotificationToken)
             dismiss(animated: true)

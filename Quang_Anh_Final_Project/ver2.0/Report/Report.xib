@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23727" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="24118.1" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23721"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24059"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -29,7 +29,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bug-W0-SkW">
-                    <rect key="frame" x="56" y="183" width="281" height="255"/>
+                    <rect key="frame" x="56" y="168" width="281" height="255"/>
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="filled" image="img_tapToLog">
                         <color key="baseBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -39,7 +39,7 @@
                     </connections>
                 </button>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="hFc-7a-B6O">
-                    <rect key="frame" x="16" y="490" width="361" height="254"/>
+                    <rect key="frame" x="16" y="475" width="361" height="269"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -54,7 +54,7 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="fXt-nO-0Iv" secondAttribute="trailing" constant="16" id="8nD-q1-MnY"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="hFc-7a-B6O" secondAttribute="bottom" constant="40" id="DII-dn-JG1"/>
                 <constraint firstItem="hFc-7a-B6O" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="Q6G-mT-8zE"/>
-                <constraint firstItem="bug-W0-SkW" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="65" id="Twj-8E-dbu"/>
+                <constraint firstItem="bug-W0-SkW" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="50" id="Twj-8E-dbu"/>
                 <constraint firstItem="bug-W0-SkW" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="56" id="V1B-Id-ZJT"/>
                 <constraint firstItem="fXt-nO-0Iv" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="goH-vN-Yba"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="hFc-7a-B6O" secondAttribute="trailing" constant="16" id="rdn-KZ-w3h"/>

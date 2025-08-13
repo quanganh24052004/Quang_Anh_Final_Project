@@ -1,14 +1,7 @@
-//
-//  HealthLogManage.swift
-//  Quang_Anh_Final_Project
-//
-//  Created by iKame Elite Fresher 2025 on 8/12/25.
-//
-
 import Foundation
 import RealmSwift
 
-enum RealmManager {
+enum PulseLogRealmManager {
     static func realm() throws -> Realm {
         return try Realm()
     }
@@ -17,7 +10,9 @@ enum RealmManager {
     static func add(_ entry: PulseEntry) throws -> PulseEntryObject {
         let obj = PulseEntryObject(entry: entry)
         let realm = try realm()
-        try realm.write { realm.add(obj) }
+        try realm.write {
+            realm.add(obj)
+        }
         return obj
     }
 
@@ -29,6 +24,16 @@ enum RealmManager {
 
     static func delete(_ obj: PulseEntryObject) throws {
         let realm = try realm()
-        try realm.write { realm.delete(obj) }
+        try realm.write {
+            realm.delete(obj)
+        }
+    }
+    
+    // Ví dụ: filter by date range
+    static func entries(from: Date, to: Date) throws -> Results<PulseEntryObject> {
+        try realm()
+            .objects(PulseEntryObject.self)
+            .filter("createdAt >= %@ AND createdAt <= %@", from, to)
+            .sorted(byKeyPath: "createdAt", ascending: false)
     }
 }

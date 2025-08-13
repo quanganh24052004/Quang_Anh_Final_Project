@@ -19,23 +19,9 @@ class Intro_ver2: UIViewController {
         titleButton.setStyle(.primary1)
         
         titleButton.addTarget(self, action: #selector(didTapPrimaryButton), for: .touchUpInside)
-        // Do any additional setup after loading the view.
     }
     
-
-
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
     @objc private func didTapPrimaryButton() {
-        // Chuyển màn
         let nextVC = CollectionOnboard()
         navigationController?.pushViewController(nextVC, animated: true)
     }
