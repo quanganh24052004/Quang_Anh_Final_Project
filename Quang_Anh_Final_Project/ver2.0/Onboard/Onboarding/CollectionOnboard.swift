@@ -50,7 +50,7 @@ class CollectionOnboard: UIViewController {
 //    }
     
     @objc private func didTapPrimaryButton() {
-        let nextVC = MainTabBarVC()
+        let nextVC = TabBar()
         navigationController?.pushViewController(nextVC, animated: true)
     }
 }

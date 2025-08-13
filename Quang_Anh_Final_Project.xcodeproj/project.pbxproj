@@ -21,6 +21,8 @@
 		0856ECC12E192F8A003DBAB6 /* BaseSelectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0856ECC02E192F8A003DBAB6 /* BaseSelectionVC.swift */; };
 		2C63F2442E4C2A5200602C1A /* SettingCell_ver2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C63F2422E4C2A5200602C1A /* SettingCell_ver2.swift */; };
 		2C63F2452E4C2A5200602C1A /* SettingCell_ver2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C63F2432E4C2A5200602C1A /* SettingCell_ver2.xib */; };
+		2C63F2572E4C499500602C1A /* RealmUserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C63F2562E4C499500602C1A /* RealmUserProfile.swift */; };
+		2C63F25B2E4C4A8700602C1A /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C63F25A2E4C4A8700602C1A /* RealmManager.swift */; };
 		2C7F89502E3F6D0C0020BB51 /* AddLog.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C7F894F2E3F6D0C0020BB51 /* AddLog.xib */; };
 		2C7F89512E3F6D0C0020BB51 /* AddLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7F894E2E3F6D0C0020BB51 /* AddLog.swift */; };
 		2C9FEAE42E3217530087111D /* Intro_ver2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9FEAE22E3217530087111D /* Intro_ver2.swift */; };
@@ -89,6 +91,8 @@
 		11EFBB71587E8FAA148E9A12 /* Pods-Quang_Anh_Final_Project.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Quang_Anh_Final_Project.debug.xcconfig"; path = "Target Support Files/Pods-Quang_Anh_Final_Project/Pods-Quang_Anh_Final_Project.debug.xcconfig"; sourceTree = "<group>"; };
 		2C63F2422E4C2A5200602C1A /* SettingCell_ver2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingCell_ver2.swift; sourceTree = "<group>"; };
 		2C63F2432E4C2A5200602C1A /* SettingCell_ver2.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingCell_ver2.xib; sourceTree = "<group>"; };
+		2C63F2562E4C499500602C1A /* RealmUserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmUserProfile.swift; sourceTree = "<group>"; };
+		2C63F25A2E4C4A8700602C1A /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
 		2C7F894E2E3F6D0C0020BB51 /* AddLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLog.swift; sourceTree = "<group>"; };
 		2C7F894F2E3F6D0C0020BB51 /* AddLog.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddLog.xib; sourceTree = "<group>"; };
 		2C9FEAE22E3217530087111D /* Intro_ver2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Intro_ver2.swift; sourceTree = "<group>"; };
@@ -278,17 +282,9 @@
 			path = AddLog;
 			sourceTree = "<group>";
 		};
-		2C7F89522E3F6FDA0020BB51 /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "New Group";
-			sourceTree = "<group>";
-		};
 		2C9FEAD22E3211530087111D /* ver2.0 */ = {
 			isa = PBXGroup;
 			children = (
-				2C7F89522E3F6FDA0020BB51 /* New Group */,
 				2CAF6B992E3F524300F24E72 /* Base */,
 				2CAF6B982E3F0EE600F24E72 /* Onboard */,
 				2CAF6B972E3F0ED900F24E72 /* Report */,
@@ -390,33 +386,9 @@
 			path = Settings;
 			sourceTree = "<group>";
 		};
-		2CAF6B772E3F0DA300F24E72 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		2CAF6B782E3F0DA600F24E72 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		2CAF6B792E3F0DBB00F24E72 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
 		2CAF6B7A2E3F0E8600F24E72 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
-				2CAF6B782E3F0DA600F24E72 /* Model */,
-				2CAF6B772E3F0DA300F24E72 /* View */,
-				2CAF6B792E3F0DBB00F24E72 /* ViewModel */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -759,6 +731,8 @@
 			children = (
 				2CDFED1C2E4B3546003DDB84 /* HealthLog.swift */,
 				2CD779172E4B3A3C003DEFFB /* HealthLogManage.swift */,
+				2C63F2562E4C499500602C1A /* RealmUserProfile.swift */,
+				2C63F25A2E4C4A8700602C1A /* RealmManager.swift */,
 			);
 			path = DataBase;
 			sourceTree = "<group>";
@@ -937,6 +911,7 @@
 				2CBC51892E1BCED900AB5745 /* Setting.swift in Sources */,
 				0856ECC12E192F8A003DBAB6 /* BaseSelectionVC.swift in Sources */,
 				0856ECA32E18C6EA003DBAB6 /* SelectionVC1.swift in Sources */,
+				2C63F2572E4C499500602C1A /* RealmUserProfile.swift in Sources */,
 				0856ECBD2E1923F7003DBAB6 /* SelectionVC3.swift in Sources */,
 				0856EC962E17D280003DBAB6 /* ViewController.swift in Sources */,
 				2CBC51812E1B79C300AB5745 /* PulseEntry.swift in Sources */,
@@ -960,6 +935,7 @@
 				2CBC518D2E1BD63900AB5745 /* FormCV.swift in Sources */,
 				2CBC51912E1BD6D700AB5745 /* ProfileVC.swift in Sources */,
 				2CAF6BA82E3F56C700F24E72 /* Settings.swift in Sources */,
+				2C63F25B2E4C4A8700602C1A /* RealmManager.swift in Sources */,
 				0856ECB72E18E566003DBAB6 /* CardCollectionViewCell.swift in Sources */,
 				0856EC8D2E17D279003DBAB6 /* SceneDelegate.swift in Sources */,
 				2CBC51762E1B64BB00AB5745 /* SettingsCell.swift in Sources */,

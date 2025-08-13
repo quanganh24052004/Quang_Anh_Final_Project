@@ -28,42 +28,21 @@ class Settings: UIViewController {
             })
         ]),
         SettingSection(items: [
-            SettingItem(icon: UIImage(named: "ic_notify"), title: "Daily Reminder", action: { [weak self] in
-                // ví dụ: mở màn hình cài đặt reminder
-//                let vc = DailyReminderVC()
-//                vc.hidesBottomBarWhenPushed = true
-//                self?.navigationController?.pushViewController(vc, animated: true)
+            SettingItem(icon: UIImage(named: "ic_dailyReminder"), title: "Daily Reminder", action: {
             }),
-            SettingItem(icon: UIImage(named: "ic_changeAppIcon"), title: "Change App Icon", action: { [weak self] in
-//                let vc = ChangeAppIconVC()
-//                vc.hidesBottomBarWhenPushed = true
-//                self?.navigationController?.pushViewController(vc, animated: true)
+            SettingItem(icon: UIImage(named: "ic_changeAppIcon"), title: "Change App Icon", action: {
             }),
-            SettingItem(icon: UIImage(named: "ic_lang"), title: "Language", action: { [weak self] in
-//                let vc = LanguageVC()
-//                vc.hidesBottomBarWhenPushed = true
-//                self?.navigationController?.pushViewController(vc, animated: true)
+            SettingItem(icon: UIImage(named: "ic_language"), title: "Language", action: {
             }),
         ]),
         SettingSection(items: [
-            SettingItem(icon: UIImage(named: "ic_rate"), title: "Rate Us", action: {
-//                guard let url = URL(string: "itms-apps://itunes.apple.com/app/idYOUR_APP_ID?action=write-review") else { return }
-//                UIApplication.shared.open(url)
+            SettingItem(icon: UIImage(named: "ic_rateUs"), title: "Rate Us", action: {
             }),
             SettingItem(icon: UIImage(named: "ic_feedback"), title: "Feedback", action: {
-//                if let url = URL(string: "mailto:support@yourapp.com") {
-//                    UIApplication.shared.open(url)
-//                }
             }),
             SettingItem(icon: UIImage(named: "ic_privacyPolicy"), title: "Privacy Policy", action: {
-//                if let url = URL(string: "https://your.site/privacy") {
-//                    UIApplication.shared.open(url)
-//                }
             }),
             SettingItem(icon: UIImage(named: "ic_termOfUser"), title: "Term of User", action: {
-//                if let url = URL(string: "https://your.site/terms") {
-//                    UIApplication.shared.open(url)
-//                }
             }),
         ])
     ]

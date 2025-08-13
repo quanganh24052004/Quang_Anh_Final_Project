@@ -12,27 +12,19 @@ struct UserProfile: Codable {
 
 // MARK: PROFILESTORAGE
 class ProfileStorage {
-    private static let key = "user_profile"
-    
     static func save(_ profile: UserProfile) {
-        if let encoded = try? JSONEncoder().encode(profile) {
-            UserDefaults.standard.set(encoded, forKey: key)
-        }
+        RealmUserManager.shared.saveUserProfile(profile)
     }
 
     static func get() -> UserProfile? {
-        guard let data = UserDefaults.standard.data(forKey: key),
-              let decoded = try? JSONDecoder().decode(UserProfile.self, from: data) else {
-            return nil
-        }
-        return decoded
+        return RealmUserManager.shared.getUserProfile()
     }
     
     static func clear() {
-        UserDefaults.standard.removeObject(forKey: key)
+        RealmUserManager.shared.deleteUserProfile()
     }
 
     static func hasProfile() -> Bool {
-        return get() != nil
+        return RealmUserManager.shared.hasUserProfile()
     }
 }
