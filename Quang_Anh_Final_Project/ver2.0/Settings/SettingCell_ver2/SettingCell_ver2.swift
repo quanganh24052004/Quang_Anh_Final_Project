@@ -14,6 +14,9 @@ class SettingCell_ver2: UITableViewCell {
     
     @IBOutlet weak var titleSettingCell: UILabel!
     
+    private var isFirstRow = false
+    private var isLastRow  = false
+    
     override func awakeFromNib() {
         super.awakeFromNib()
     }
@@ -22,7 +25,7 @@ class SettingCell_ver2: UITableViewCell {
         super.setSelected(selected, animated: animated)
         super.backgroundColor = .background1
         super.layer.cornerRadius = 12
-//        self.layer.masksToBounds = true
+//        super.layer.masksToBounds = true
     }
 
     
